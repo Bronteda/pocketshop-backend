@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'jwt_auth',
+    'shops',
 ]
 
 AUTH_USER_MODEL = 'jwt_auth.User'
@@ -56,7 +57,7 @@ REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'jwt_auth.authentication.JWTAuthentication'
-        ],
+    ],
 }
 
 TEMPLATES = [
@@ -84,8 +85,8 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
+        # 'USER': os.getenv('DB_USER'),
+        # 'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
     }
