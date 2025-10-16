@@ -35,7 +35,7 @@ class ShopListView(APIView):
 
 class ShopDetailView(APIView):
     permission_classes = (IsAuthenticatedOrReadOnly, )
-    
+
     def get_shop(self, pk):
         try:
             return Shop.objects.get(pk=pk)
