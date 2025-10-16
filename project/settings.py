@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'jwt_auth',
+    'orders',
     'shops',
     'products',
 ]
