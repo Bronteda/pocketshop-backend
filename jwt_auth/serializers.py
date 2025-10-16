@@ -34,6 +34,8 @@ class UserSerializer(serializers.ModelSerializer):
         print('DATA -> ', data)
         return data
 
+    # ST: Updated Meta fields to return only necessary data
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('id', 'email', 'username', 'first_name', 'last_name',
+                  'profile_image', 'password', 'password_confirmation')
