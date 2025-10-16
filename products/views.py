@@ -90,6 +90,3 @@ class ProductDetailView(APIView):
 
         product_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-# Get all products by shop (ADD PRODUCTS to SHOP SERIALIZER)
