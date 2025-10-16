@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'jwt_auth',
+    'orders',
 ]
 
 AUTH_USER_MODEL = 'jwt_auth.User'
