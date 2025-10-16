@@ -4,7 +4,7 @@ from jwt_auth.models import User
 
 class Shop(models.Model):
     def __str__(self):
-        return f'Shop by {self.owner} - {self.name}'
+        return f'{self.name} by {self.owner}'
     owner = models.OneToOneField(
         User,
         related_name="shop",
