@@ -33,7 +33,9 @@ class OrdersListView(APIView):
     def post(self, request):
         request.data["buyer"] = request.user.id
         orders_to_add = OrderSerializer(data=request.data)
+        
         try:
+            print(orders_to_add)
             orders_to_add.is_valid()
             orders_to_add.save()
             return Response(orders_to_add.data, status=status.HTTP_201_CREATED)
