@@ -18,7 +18,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,6 +30,7 @@ INSTALLED_APPS = [
     'jwt_auth',
     'orders',
     'shops',
+    'products',
 ]
 
 AUTH_USER_MODEL = 'jwt_auth.User'

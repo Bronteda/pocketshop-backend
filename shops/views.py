@@ -29,7 +29,7 @@ class ShopListView(APIView):
             shop_to_add.save()
             return Response(shop_to_add.data, status=status.HTTP_201_CREATED)
         except Exception as e:
-            print('ERROR')
+            print("Error: ", {e})
             return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
@@ -51,10 +51,10 @@ class ShopDetailView(APIView):
     # PUT/UPDATE Shop
     def put(self, request, pk):
         shop_to_update = self.get_shop(pk=pk)
-        print('request.user:', request.user)
+    
         if shop_to_update.owner != request.user:
             return Response(status=status.HTTP_401_UNAUTHORIZED)
-
+        request.data['owner'] = request.user.id
         updated_shop = ShopSerializer(shop_to_update, data=request.data)
         if updated_shop.is_valid():
             updated_shop.save()
