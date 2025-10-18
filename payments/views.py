@@ -29,11 +29,10 @@ class PaymentListView(APIView):
             print("Error: ", {e})
             return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-    # Body req is not required due to defaults, handle with MockPayment service
+    # Body req is not required due to defaults
     def post(self, request):
-
         # expiration_date needs to come back from request.data
-        # we don't add this to payment, but we VALIDATE that the date is correct (utilize mock service)
+        # ^ we don't add this to payment, but we VALIDATE that the date is correct (utilize mock service)
         # if correct, we create payment and mark as SUCCESS ?
 
         request.data["owner"] = request.user.id
@@ -69,7 +68,16 @@ class PaymentDetailView(APIView):
     def put(self, request, pk):
         payment_to_update = self.get_payment(pk=pk)
         print("payment_to_update:", payment_to_update)
-        return Response(status=status.HTTP_200_OK)
+        request.data['owner'] = request.user.id
+
+        updated_payment = PaymentSerializer(
+            payment_to_update, data=request.data)
+
+        if updated_payment.is_valid():
+            updated_payment.save()
+            return Response(updated_payment.data, status=status.HTTP_202_ACCEPTED)
+
+        return Response(updated_payment.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
     # DELETE Payment
     def delete(self, request, pk):
