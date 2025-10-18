@@ -13,15 +13,22 @@ from rest_framework.exceptions import NotFound
 
 # This returns all the products (no auth)
 class ProductListView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+
     def get(self, _request):
-        products = Product.objects.all()
-        serialized_products = PopulatedProductSerializer(products, many=True)
-        return Response(serialized_products.data, status=status.HTTP_200_OK)
+        try:
+            products = Product.objects.all()
 
+            if not products.exists():
+                return Response({"message": "No products found in db"}, status=status.HTTP_404_NOT_FOUND)
 
-# This view is to create a new product
-class ProductCreateView(APIView):
-    permission_classes = (IsAuthenticated, )
+            serialized_products = PopulatedProductSerializer(
+                products, many=True)
+            return Response(serialized_products.data, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            print("Error: ", {e})
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
     def post(self, request):
         try:
