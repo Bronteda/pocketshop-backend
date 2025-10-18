@@ -15,9 +15,18 @@ class ShopListView(APIView):
 
     # This returns all shops (no auth)
     def get(self, _request):
-        shops = Shop.objects.all()
-        serialized_shops = ShopSerializer(shops, many=True)
-        return Response(serialized_shops.data, status=status.HTTP_200_OK)
+        try:
+            shops = Shop.objects.all()
+
+            if not shops.exists():
+                return Response({"message": "No shops found in db"}, status=status.HTTP_404_NOT_FOUND)
+
+            serialized_shops = ShopSerializer(shops, many=True)
+            return Response(serialized_shops.data, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            print("Error: ", {e})
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
     # Creating a shop requires Authentication
     def post(self, request):
@@ -51,7 +60,7 @@ class ShopDetailView(APIView):
     # PUT/UPDATE Shop
     def put(self, request, pk):
         shop_to_update = self.get_shop(pk=pk)
-    
+
         if shop_to_update.owner != request.user:
             return Response(status=status.HTTP_401_UNAUTHORIZED)
         request.data['owner'] = request.user.id

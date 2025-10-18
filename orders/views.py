@@ -1,3 +1,4 @@
+# pylint: disable=no-member
 from .models import Order
 from .serializers.common import OrderSerializer
 from .serializers.populated import PopulatedOrderSerializer
@@ -36,7 +37,7 @@ class OrdersListView(APIView):
         
         try:
             print(orders_to_add)
-            orders_to_add.is_valid()
+            orders_to_add.is_valid(raise_exception=True)
             orders_to_add.save()
             return Response(orders_to_add.data, status=status.HTTP_201_CREATED)
         except Exception as e:

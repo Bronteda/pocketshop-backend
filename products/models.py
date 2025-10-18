@@ -5,7 +5,18 @@ from shops.models import Shop
 
 class Product(models.Model):
     def __str__(self):
-        return f'Shop {self.shop} - {self.title}'
+        return f'''
+                owner: {self.owner},
+                shop: {self.shop},
+                product_image: {self.product_image},
+                title: {self.title},
+                description: {self.description},
+                price: {self.price},
+                quantity: {self.quantity},
+                category: {self.category},
+                created_at: {self.created_at},
+                updated_at: {self.updated_at}
+                '''
     owner = models.ForeignKey(
         User,
         related_name="products",
