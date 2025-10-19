@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'shops',
     'products',
     'payments',
+    'carts',
 ]
 
 AUTH_USER_MODEL = 'jwt_auth.User'
@@ -87,8 +88,8 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('DB_NAME'),
-        # 'USER': os.getenv('DB_USER'),
-        # 'PASSWORD': os.getenv('DB_PASSWORD'),
+        'USER': os.getenv('DB_USER', None),
+        'PASSWORD': os.getenv('DB_PASSWORD', None), #This solves our env varibale issue as None becomes the default if cannot find it in your env file 
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
     }
