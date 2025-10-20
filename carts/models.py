@@ -4,6 +4,17 @@ from jwt_auth.models import User
 from products.models import Product
 
 
+class CartItem(models.Model):
+    # 1 cartItem per product (many products)
+    product = models.ForeignKey(
+        Product,
+        related_name="cart_items",
+        default=None,
+        on_delete=models.PROTECT
+    )
+    quantity = models.PositiveIntegerField(default=1)
+
+
 class Cart(models.Model):
     def __str__(self):
         return f"Cart for {self.owner.username}"
@@ -12,10 +23,12 @@ class Cart(models.Model):
         related_name="cart",
         on_delete=models.CASCADE
     )
-    products = models.ManyToManyField(
-        Product,
+    # Multiple cart_items can be in Cart ? Is this ManyToMany
+    cart_item = models.ForeignKey(
+        CartItem,
         related_name="carts",
-        default= None
+        default=None,
+        on_delete=models.PROTECT
     )
     total_cost = models.DecimalField(
         max_digits=10,
