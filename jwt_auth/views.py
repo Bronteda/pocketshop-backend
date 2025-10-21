@@ -40,21 +40,16 @@ class LoginView(APIView):
         if not user_to_login.check_password(password):
             raise PermissionDenied( detail= 'Invalid Credentials')
         
-        # ST: Updated payload to include user data when sending to client
-        
+         # timedelta can be used to calculate the difference between dates - passing 7 days gives you 7 days 
+         # represented as a date that we can add to datetime.now() to get the date 7 days from now
         dt = datetime.now() + timedelta(days=7) # validity of token
-        payload = {
-            'sub': str(user_to_login.id),
-            'id': user_to_login.id,
-            'username': user_to_login.username,
-            'email': user_to_login.email,
-            'first_name': user_to_login.first_name,
-            'last_name': user_to_login.last_name,
-            'exp': int(dt.strftime('%s'))
-        }
         token = jwt.encode(
-            payload,
+            {'sub': str(user_to_login.id), 'exp': int(dt.strftime('%s'))},
             settings.SECRET_KEY,
             algorithm='HS256'
         )
-        return Response({ 'token': token })
+        return Response({
+            'token': token,
+            'user': UserSerializer(user_to_login).data,
+            'message': f"Welcome back {user_to_login.username}"
+        })
