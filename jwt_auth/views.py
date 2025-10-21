@@ -6,6 +6,7 @@ from datetime import datetime, timedelta # creates timestamps in dif formats
 from django.contrib.auth import get_user_model # gets user model we are using
 from django.conf import settings # import our settings for our secret
 from .serializers import UserSerializer
+from .models import User
 import jwt # import jwt
 
 User = get_user_model()
@@ -53,3 +54,23 @@ class LoginView(APIView):
             'user': UserSerializer(user_to_login).data,
             'message': f"Welcome back {user_to_login.username}"
         })
+    
+
+class UserView(APIView):
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="🆘 Can't find that user")
+        
+    # This returns a user
+    def get(self, _request, pk):
+        try:
+            user = self.get_user(pk)
+            print("user is:", user)
+            serialized_user = UserSerializer(user)
+            return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            print("Error: ", {e})
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
