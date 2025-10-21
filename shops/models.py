@@ -19,6 +19,7 @@ class Shop(models.Model):
     )
     name = models.CharField(max_length=50)
     bio = models.TextField()
-    shop_image = models.CharField(max_length=250)
+    # ST: shop_image should be optional / added later
+    shop_image = models.CharField(max_length=250, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
