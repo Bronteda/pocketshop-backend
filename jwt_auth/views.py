@@ -42,10 +42,16 @@ class LoginView(APIView):
         
          # timedelta can be used to calculate the difference between dates - passing 7 days gives you 7 days 
          # represented as a date that we can add to datetime.now() to get the date 7 days from now
+        serialized_user = UserSerializer(user_to_login)
         dt = datetime.now() + timedelta(days=7) # validity of token
         token = jwt.encode(
             {'sub': str(user_to_login.id), 'exp': int(dt.strftime('%s'))}, # strftime -> string from time and turning it into a number
             settings.SECRET_KEY,
             algorithm='HS256'
         )
-        return Response({ 'token': token, 'message': f"Welcome back {user_to_login.username}"})
+        # ST: This response needs to be a JSON data structure for the client to utilize.
+        return Response({ 
+            'token': token, 
+            'message': f"Welcome back {user_to_login.username}",
+            'user': serialized_user.data
+        })
