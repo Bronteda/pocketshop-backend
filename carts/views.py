@@ -39,12 +39,12 @@ class MyCartView(APIView):
                     detail=f"Can't find Cart for user {request.user.username}")
 
             #get product_id from request
-            product_id = request.data.get("product")
-            if not product_id:
-                return Response({"detail": "product_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+            cart_item_id = request.data.get("cart_item")
+            if not cart_item_id:
+                return Response({"detail": "cart_item_id is required"}, status=status.HTTP_400_BAD_REQUEST)
 
             #find the cart item
-            cart_item = CartItem.objects.get(cart = cart_user,product=product_id)
+            cart_item = CartItem.objects.get(cart = cart_user,pk=cart_item_id)
 
             #Delete item from cart
             cart_item.delete()
