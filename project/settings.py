@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'shops',
     'products',
     'payments',
+    'carts',
 ]
 
 AUTH_USER_MODEL = 'jwt_auth.User'
@@ -39,14 +40,15 @@ AUTH_USER_MODEL = 'jwt_auth.User'
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# CORS Configuration
 CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'project.urls'
@@ -87,8 +89,9 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('DB_NAME'),
-        # 'USER': os.getenv('DB_USER'),
-        # 'PASSWORD': os.getenv('DB_PASSWORD'),
+        'USER': os.getenv('DB_USER', None),
+        # This solves our env varibale issue as None becomes the default if cannot find it in your env file
+        'PASSWORD': os.getenv('DB_PASSWORD', None),
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
     }
