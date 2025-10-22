@@ -38,6 +38,6 @@ class JWTAuthentication(BasicAuthentication):
         # If the user does not exist it will fall into the below
         except User.DoesNotExist:
             raise PermissionDenied(detail='User Not Found')
-
+        
         # if all good, return user and the token
         return (user, token)

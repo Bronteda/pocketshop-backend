@@ -6,6 +6,7 @@ from datetime import datetime, timedelta # creates timestamps in dif formats
 from django.contrib.auth import get_user_model # gets user model we are using
 from django.conf import settings # import our settings for our secret
 from .serializers import UserSerializer
+from .models import User
 import jwt # import jwt
 
 User = get_user_model()
@@ -44,8 +45,32 @@ class LoginView(APIView):
          # represented as a date that we can add to datetime.now() to get the date 7 days from now
         dt = datetime.now() + timedelta(days=7) # validity of token
         token = jwt.encode(
-            {'sub': str(user_to_login.id), 'exp': int(dt.strftime('%s'))}, # strftime -> string from time and turning it into a number
+            {'sub': str(user_to_login.id), 'exp': int(dt.strftime('%s'))},
             settings.SECRET_KEY,
             algorithm='HS256'
         )
-        return Response({ 'token': token, 'message': f"Welcome back {user_to_login.username}"})
+        return Response({
+            'token': token,
+            'userId': user_to_login.id,
+            'message': f"Welcome back {user_to_login.username}"
+        })
+    
+
+class UserView(APIView):
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="🆘 Can't find that user")
+        
+    # This returns a user
+    def get(self, _request, pk):
+        try:
+            user = self.get_user(pk)
+            print("user is:", user)
+            serialized_user = UserSerializer(user)
+            return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            print("Error: ", {e})
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)

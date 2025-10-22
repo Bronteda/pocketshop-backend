@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'jwt_auth.User'
 
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",  # Must be first!
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

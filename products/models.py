@@ -27,7 +27,8 @@ class Product(models.Model):
         related_name="products",
         on_delete=models.CASCADE
     )
-    product_image = models.CharField(max_length=250)
+    # ST: product_image should be optional / added later
+    product_image = models.CharField(max_length=250, null=True, blank=True)
     title = models.CharField(max_length=120)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
