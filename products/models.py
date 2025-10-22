@@ -28,7 +28,7 @@ class Product(models.Model):
         on_delete=models.CASCADE
     )
     # ST: product_image should be optional / added later
-    product_image = models.CharField(max_length=250, null=True, blank=True)
+    product_image = models.CharField(max_length=250, null=True, blank=True, default="")
     title = models.CharField(max_length=120)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
