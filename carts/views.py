@@ -38,8 +38,8 @@ class MyCartView(APIView):
                 raise NotFound(
                     detail=f"Can't find Cart for user {request.user.username}")
 
-            #get product_id from request
-            cart_item_id = request.data.get("cart_item")
+            #get cart_item_id from request
+            cart_item_id = request.data.get("cart_item_id")
             if not cart_item_id:
                 return Response({"detail": "cart_item_id is required"}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -71,10 +71,10 @@ class MyCartView(APIView):
                 raise NotFound(
                     detail=f"Can't find Cart for user {request.user.username}")
             
-            #get product_id from request
-            product = request.data.get("product")
-            if not product:
-                return Response({"detail": "product_id is required"}, status=status.HTTP_400_BAD_REQUEST)
+            #get cart_item_id from request
+            cart_item_id = request.data.get("cart_item_id")
+            if not cart_item_id:
+                return Response({"detail": "cart_item_id is required"}, status=status.HTTP_400_BAD_REQUEST)
             
             #get quantity from request
             quantity = request.data.get("quantity")
@@ -93,7 +93,7 @@ class MyCartView(APIView):
             
             #find the cart item
             try:
-                cart_item = CartItem.objects.get(cart = cart_user,product=product)
+                cart_item = CartItem.objects.get(cart = cart_user,pk=cart_item_id)
             except Exception as e:
                 return Response({"detail":"Cart item not found"}, status=status.HTTP_404_NOT_FOUND)
 
