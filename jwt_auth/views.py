@@ -2,6 +2,7 @@ from rest_framework.views import APIView # main API controller class
 from rest_framework.response import Response #response class
 from rest_framework import status
 from rest_framework.exceptions import PermissionDenied
+from rest_framework.exceptions import NotFound
 from datetime import datetime, timedelta # creates timestamps in dif formats
 from django.contrib.auth import get_user_model # gets user model we are using
 from django.conf import settings # import our settings for our secret
@@ -55,7 +56,7 @@ class LoginView(APIView):
             'message': f"Welcome back {user_to_login.username}"
         })
     
-
+# Add a boolean to see if user already has a shop or not
 class UserView(APIView):
     def get_user(self, pk):
         try:

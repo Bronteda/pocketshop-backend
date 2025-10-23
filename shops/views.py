@@ -1,7 +1,7 @@
 # pylint: disable=no-member
 from rest_framework.views import APIView  # main API controller class
 from rest_framework.response import Response  # response class
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework import status
 from rest_framework.exceptions import NotFound
 from .serializers.common import ShopSerializer
@@ -40,6 +40,24 @@ class ShopListView(APIView):
         except Exception as e:
             print("Error: ", {e})
             return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+# This is to grab a user's shop (if they are the owner)
+class UserShopView(APIView):
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request):
+        try:
+            shop = request.user.shop
+            print("shop is:", shop)
+        except shop.DoesNotExist:
+            return Response({"Error": "Shop Not Found in DB"}, status=status.HTTP_404_NOT_FOUND)
+            
+        if shop.owner != request.user:
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
+
+        serialized_shop = PopulatedShopSerializer(shop)
+        return Response(serialized_shop.data, status=status.HTTP_200_OK)
 
 
 class ShopDetailView(APIView):
