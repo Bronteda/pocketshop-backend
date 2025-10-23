@@ -42,26 +42,57 @@ class ShopListView(APIView):
             return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 
-# This is to grab a user's shop (if they are the owner)
+# #This is to grab a user's shop (if they are the owner)
 class UserShopView(APIView):
     permission_classes = (IsAuthenticated, )
 
-    def get(self, request):
+    def get_user_shop(self, request):
         try:
             shop = request.user.shop
             print("shop is:", shop)
+            return shop
         except shop.DoesNotExist:
             return Response({"Error": "Shop Not Found in DB"}, status=status.HTTP_404_NOT_FOUND)
+
+    # # GET Shop
+    def get(self, request):
+        shop = self.get_user_shop(request)
             
         if shop.owner != request.user:
             return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
 
         serialized_shop = PopulatedShopSerializer(shop)
         return Response(serialized_shop.data, status=status.HTTP_200_OK)
+    
+    # # PUT/UPDATE Shop
+    def put(self, request):
+        shop_to_update = self.get_user_shop(request)
+        print("SHOP TO UPDATE:", shop_to_update)
+
+        if shop_to_update.owner != request.user:
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
+        
+        request.data['owner'] = request.user.id
+        updated_shop = ShopSerializer(shop_to_update, data=request.data)
+
+        if updated_shop.is_valid():
+            updated_shop.save()
+            return Response(updated_shop.data, status=status.HTTP_202_ACCEPTED)
+
+        return Response(updated_shop.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+    # # DELETE Shop
+    def delete(self, request):
+        shop_to_delete = self.get_user_shop(request)
+
+        if shop_to_delete.owner != request.user:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
+
+        shop_to_delete.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class ShopDetailView(APIView):
-    permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get_shop(self, pk):
         try:
@@ -75,26 +106,26 @@ class ShopDetailView(APIView):
         serialized_shop = PopulatedShopSerializer(shop)
         return Response(serialized_shop.data, status=status.HTTP_200_OK)
 
-    # PUT/UPDATE Shop
-    def put(self, request, pk):
-        shop_to_update = self.get_shop(pk=pk)
+    # // NOT NEEDED
+    # def put(self, request, pk):
+    #     shop_to_update = self.get_shop(pk=pk)
 
-        if shop_to_update.owner != request.user:
-            return Response(status=status.HTTP_401_UNAUTHORIZED)
-        request.data['owner'] = request.user.id
-        updated_shop = ShopSerializer(shop_to_update, data=request.data)
-        if updated_shop.is_valid():
-            updated_shop.save()
-            return Response(updated_shop.data, status=status.HTTP_202_ACCEPTED)
+    #     if shop_to_update.owner != request.user:
+    #         return Response(status=status.HTTP_401_UNAUTHORIZED)
+    #     request.data['owner'] = request.user.id
+    #     updated_shop = ShopSerializer(shop_to_update, data=request.data)
+    #     if updated_shop.is_valid():
+    #         updated_shop.save()
+    #         return Response(updated_shop.data, status=status.HTTP_202_ACCEPTED)
 
-        return Response(updated_shop.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+    #     return Response(updated_shop.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-    # DELETE Shop
-    def delete(self, request, pk):
-        shop_to_delete = self.get_shop(pk=pk)
+    # // NOT NEEDED
+    # def delete(self, request, pk):
+    #     shop_to_delete = self.get_shop(pk=pk)
 
-        if shop_to_delete.owner != request.user:
-            return Response(status=status.HTTP_401_UNAUTHORIZED)
+    #     if shop_to_delete.owner != request.user:
+    #         return Response(status=status.HTTP_401_UNAUTHORIZED)
 
-        shop_to_delete.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    #     shop_to_delete.delete()
+    #     return Response(status=status.HTTP_204_NO_CONTENT)

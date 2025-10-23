@@ -52,8 +52,7 @@ class LoginView(APIView):
         )
         return Response({
             'token': token,
-            'userId': user_to_login.id,
-            'message': f"Welcome back {user_to_login.username}"
+            'userId': user_to_login.id
         })
     
 # Add a boolean to see if user already has a shop or not
