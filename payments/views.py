@@ -4,10 +4,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from .serializers.common import PaymentSerializer
 from .serializers.populated import PopulatedPaymentSerializer
+from .serializers.checkout import CheckoutSerializer
 from .models import Payment
+from .services import MockPaymentService
 
 
 # This returns all payments in DB (mostly used for testing)
@@ -84,3 +86,34 @@ class PaymentDetailView(APIView):
         payment_to_delete = self.get_payment(pk)
         payment_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class CheckoutView(APIView):
+    permission_classes = (IsAuthenticated,)
+    
+    def post(self, request):
+        # This will return the data if card is validated
+        s = CheckoutSerializer(data=request.data)
+        print("s is:", s)
+        s.is_valid(raise_exception=True)
+
+        svc = MockPaymentService()
+        # Authorizes and returns status and auth_id
+        result = svc.authorize(**s.validated_data)
+        print("svc result is:", result)
+
+        if not result.ok:
+            return Response(
+                {"detail": "Declined, payment failed.", "code": "declined"},
+                status=status.HTTP_402_PAYMENT_REQUIRED
+            )
+        
+        payment = Payment.objects.create(
+            owner=request.user,
+            status="SUCCEEDED",
+            payment_intent_id=result.auth_id
+        )
+
+        print("payment created:", payment)
+        return Response(PaymentSerializer(payment).data, status=status.HTTP_201_CREATED)
+
