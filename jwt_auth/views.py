@@ -68,7 +68,6 @@ class UserView(APIView):
     def get(self, _request, pk):
         try:
             user = self.get_user(pk)
-            print("user is:", user)
             serialized_user = UserWithShopSerializer(user)
             return Response(serialized_user.data, status=status.HTTP_200_OK)
 

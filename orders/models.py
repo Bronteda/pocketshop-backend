@@ -1,8 +1,7 @@
 from django.db import models
 from jwt_auth.models import User
-from products.models import Product
 from payments.models import Payment
-
+from products.models import Product
 
 class Order(models.Model):
     def __str__(self):
@@ -28,18 +27,13 @@ class Order(models.Model):
     status = models.CharField(max_length=50)
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField()
-    payment = models.ForeignKey(
+    # ST - Updated to OneToOneField
+    payment = models.OneToOneField(
         Payment,
-        related_name='orders',
-        on_delete=models.CASCADE,  # ST: Updating to delete from protect
-
-        # ST: maybe we should update to require payment for order, if order cannot be created before payment is provided
-        null=True,
-        blank=True
+        related_name='order',
+        on_delete=models.CASCADE  # ST: Updating to delete from protect
     )
     created_at = models.DateTimeField(auto_now_add=True)
-
-    # ST: Changing to (auto_now=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     '''
