@@ -19,9 +19,9 @@ class Order(models.Model):
         related_name='orders',
         on_delete=models.CASCADE
     )
-    product = models.OneToOneField(
+    product = models.ForeignKey(
         Product,
-        related_name="order",
+        related_name="orders",
         on_delete=models.CASCADE
     )
     status = models.CharField(max_length=50)
