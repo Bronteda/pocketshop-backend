@@ -103,7 +103,7 @@ class ProductDetailView(APIView):
         product_to_update = self.get_product(pk=pk)
 
         if product_to_update.owner != request.user:
-            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_403_FORBIDDEN)
 
         updated_product = ProductSerializer(
             product_to_update,
