@@ -165,7 +165,7 @@ class AddCartItemView(APIView):
 
                 new_cart_quantity = current_item.quantity + quantity
 
-                # basically checking we don't add more than the avaliable stock in cart
+                # basically checking we don't add more than the available stock in cart
                 if (new_cart_quantity > current_item.product.quantity):
                     current_item.quantity = current_item.product.quantity
                 else:
