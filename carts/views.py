@@ -27,8 +27,8 @@ class MyCartView(APIView):
                 {"detail": f"No cart found for user {request.user.username}"},
                 status=status.HTTP_404_NOT_FOUND
             )
-    
-    #We would be in cart view which has the URL with the pk
+
+    # We would be in cart view which has the URL with the pk
     def delete(self, request):
         try:
             # Get users cart
@@ -38,30 +38,30 @@ class MyCartView(APIView):
                 raise NotFound(
                     detail=f"Can't find Cart for user {request.user.username}")
 
-            #get cart_item_id from request
+            # get cart_item_id from request
             cart_item_id = request.data.get("cart_item_id")
             if not cart_item_id:
                 return Response({"detail": "cart_item_id is required"}, status=status.HTTP_400_BAD_REQUEST)
 
-            #find the cart item
-            cart_item = CartItem.objects.get(cart = cart_user,pk=cart_item_id)
+            # find the cart item
+            cart_item = CartItem.objects.get(cart=cart_user, pk=cart_item_id)
 
-            #Delete item from cart
+            # Delete item from cart
             cart_item.delete()
 
-            #recalculate the total
+            # recalculate the total
             cart_user.total_cost = CalculateTotal(cart_user.cart_items.all())
 
             cart_user.save()
-            #serialize cart
+            # serialize cart
             serialized_new_cart = PopulatedCartSerializer(cart_user)
 
             return Response(serialized_new_cart.data, status=status.HTTP_200_OK)
         except Exception as e:
             print("Error: ", {e})
             return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-        
-    #update quantity 
+
+    # update quantity
     def patch(self, request):
         try:
          # Get users cart
@@ -70,45 +70,46 @@ class MyCartView(APIView):
             except Cart.DoesNotExist:
                 raise NotFound(
                     detail=f"Can't find Cart for user {request.user.username}")
-            
-            #get cart_item_id from request
+
+            # get cart_item_id from request
             cart_item_id = request.data.get("cart_item_id")
             if not cart_item_id:
                 return Response({"detail": "cart_item_id is required"}, status=status.HTTP_400_BAD_REQUEST)
-            
-            #get quantity from request
+
+            # get quantity from request
             quantity = request.data.get("quantity")
-            #We use is None because if you say 0 it take it as falsy and will hit this endpoint if quantity is 0
+            # We use is None because if you say 0 it take it as falsy and will hit this endpoint if quantity is 0
             if quantity is None:
                 return Response({"detail": "quantity is required"}, status=status.HTTP_400_BAD_REQUEST)
-            #checking quantity is an integer
+            # checking quantity is an integer
             try:
                 quantity = int(quantity)
             except (ValueError, TypeError):
                 return Response({"detail": "quantity must be a valid integer"}, status=status.HTTP_400_BAD_REQUEST)
-            
-            #Check if quantity not negative
+
+            # Check if quantity not negative
             if quantity < 0:
                 return Response({"detail": "quantity is required"}, status=status.HTTP_400_BAD_REQUEST)
-            
-            #find the cart item
-            try:
-                cart_item = CartItem.objects.get(cart = cart_user,pk=cart_item_id)
-            except Exception as e:
-                return Response({"detail":"Cart item not found"}, status=status.HTTP_404_NOT_FOUND)
 
-            #if quantity given is 0 delete product item
-            if int(quantity) == 0 :
-                #Delete item from cart
+            # find the cart item
+            try:
+                cart_item = CartItem.objects.get(
+                    cart=cart_user, pk=cart_item_id)
+            except Exception as e:
+                return Response({"detail": "Cart item not found"}, status=status.HTTP_404_NOT_FOUND)
+
+            # if quantity given is 0 delete product item
+            if int(quantity) == 0:
+                # Delete item from cart
                 cart_item.delete()
             else:
                 cart_item.quantity = quantity
                 cart_item.save()
 
-            #Recalculate
-            cart_user.total_cost=CalculateTotal(cart_user.cart_items.all())
+            # Recalculate
+            cart_user.total_cost = CalculateTotal(cart_user.cart_items.all())
 
-            #Save cart
+            # Save cart
             cart_user.save()
 
             serialized_saved_cart = PopulatedCartSerializer(cart_user)
@@ -151,19 +152,31 @@ class AddCartItemView(APIView):
             except Product.DoesNotExist:
                 raise NotFound(
                     detail=f"Can't find Product with id: {product}")
-            
-            #seeing if that cart item exists 
+
+            # seeing if that cart item exists
             cart_item_exists = CartItem.objects.filter(
                 cart=cart_user, product=product).exists()
 
-            #if that cart item exists increase the quantity else create new
+            # if that cart item exists increase the quantity else create new
             if cart_item_exists:
-                #Getting the current work item
+                # Getting the current work item
                 current_item = CartItem.objects.get(
                     cart=cart_user, product=product)
-                current_item.quantity += quantity
+
+                new_cart_quantity = current_item.quantity + quantity
+
+                # basically checking we don't add more than the available stock in cart
+                if new_cart_quantity > current_item.product.quantity:
+                    current_item.quantity = current_item.product.quantity
+                else:
+                    current_item.quantity += quantity
+
                 current_item.save()
             else:
+                   # If someone tries to add more than available stock for a new item
+                if quantity > product.quantity:
+                    quantity = product.quantity
+
                 request.data["cart"] = cart_user.id
                 cart_item_to_add = CartItemSerializer(data=request.data)
                 print("cart_item_to_add:", cart_item_to_add)
@@ -171,7 +184,7 @@ class AddCartItemView(APIView):
                 cart_item_to_add.is_valid(raise_exception=True)
                 cart_item_to_add.save()
 
-            #recalculate total
+            # recalculate total
             cart_user.total_cost = CalculateTotal(cart_user.cart_items.all())
 
             #Save cart
@@ -193,8 +206,8 @@ class ClearCartView(APIView):
         try:
             cart = Cart.objects.get(owner=request.user)
 
-            # Clear all products
-            cart.products.clear()
+            # Clear all cart items (delete all CartItem objects)
+            cart.cart_items.all().delete()
             cart.total_cost = 0
             cart.save()
 
