@@ -1,8 +1,7 @@
-from rest_framework import serializers
-
 from jwt_auth.serializers import UserSerializer
-from .common import OrderSerializer
+from orders.serializers.common import OrderSerializer
+from products.serializers.common import ProductSerializer
 
 class PopulatedOrderSerializer(OrderSerializer):
     buyer = UserSerializer()
-    # product = ProductSerializer - when product model done 
+    product = ProductSerializer()

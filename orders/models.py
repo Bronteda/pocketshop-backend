@@ -27,10 +27,9 @@ class Order(models.Model):
     status = models.CharField(max_length=50)
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField()
-    # ST - Updated to OneToOneField
-    payment = models.OneToOneField(
+    payment = models.ForeignKey(
         Payment,
-        related_name='order',
+        related_name='orders',
         on_delete=models.CASCADE  # ST: Updating to delete from protect
     )
     created_at = models.DateTimeField(auto_now_add=True)
