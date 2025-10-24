@@ -105,27 +105,3 @@ class ShopDetailView(APIView):
         shop = self.get_shop(pk=pk)
         serialized_shop = PopulatedShopSerializer(shop)
         return Response(serialized_shop.data, status=status.HTTP_200_OK)
-
-    # // NOT NEEDED
-    # def put(self, request, pk):
-    #     shop_to_update = self.get_shop(pk=pk)
-
-    #     if shop_to_update.owner != request.user:
-    #         return Response(status=status.HTTP_401_UNAUTHORIZED)
-    #     request.data['owner'] = request.user.id
-    #     updated_shop = ShopSerializer(shop_to_update, data=request.data)
-    #     if updated_shop.is_valid():
-    #         updated_shop.save()
-    #         return Response(updated_shop.data, status=status.HTTP_202_ACCEPTED)
-
-    #     return Response(updated_shop.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-
-    # // NOT NEEDED
-    # def delete(self, request, pk):
-    #     shop_to_delete = self.get_shop(pk=pk)
-
-    #     if shop_to_delete.owner != request.user:
-    #         return Response(status=status.HTTP_401_UNAUTHORIZED)
-
-    #     shop_to_delete.delete()
-    #     return Response(status=status.HTTP_204_NO_CONTENT)

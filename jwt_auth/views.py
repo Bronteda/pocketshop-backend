@@ -6,9 +6,10 @@ from rest_framework.exceptions import NotFound
 from datetime import datetime, timedelta # creates timestamps in dif formats
 from django.contrib.auth import get_user_model # gets user model we are using
 from django.conf import settings # import our settings for our secret
-from .serializers import UserSerializer
+from .serializers import UserSerializer, UserWithShopSerializer
 from .models import User
 import jwt # import jwt
+from shops.models import Shop
 
 User = get_user_model()
 
@@ -55,20 +56,19 @@ class LoginView(APIView):
             'userId': user_to_login.id
         })
     
-# Add a boolean to see if user already has a shop or not
+
+# This returns a user and a has_shop bool
 class UserView(APIView):
     def get_user(self, pk):
         try:
-            return User.objects.get(pk=pk)
+            return User.objects.select_related("shop").get(pk=pk)
         except User.DoesNotExist:
             raise NotFound(detail="🆘 Can't find that user")
-        
-    # This returns a user
+
     def get(self, _request, pk):
         try:
             user = self.get_user(pk)
-            print("user is:", user)
-            serialized_user = UserSerializer(user)
+            serialized_user = UserWithShopSerializer(user)
             return Response(serialized_user.data, status=status.HTTP_200_OK)
 
         except Exception as e:
