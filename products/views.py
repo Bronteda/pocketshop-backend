@@ -97,3 +97,22 @@ class ProductDetailView(APIView):
 
         product_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    # this is needed when quantity changes after order created
+    def patch(self, request, pk):
+        product_to_update = self.get_product(pk=pk)
+
+        if product_to_update.owner != request.user:
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
+
+        updated_product = ProductSerializer(
+            product_to_update,
+            data=request.data,
+            partial=True
+        )
+
+        if updated_product.is_valid():
+            updated_product.save()
+            return Response(updated_product.data, status=status.HTTP_200_OK)
+        
+        return Response(updated_product.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
