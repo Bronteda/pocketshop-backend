@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from jwt_auth.serializers import UserSerializer
 from orders.serializers.common import OrderSerializer
-from products.serializers.populated import ProductSerializer
 
 
 class PopulatedOrderSerializer(OrderSerializer):
