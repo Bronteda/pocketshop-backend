@@ -9,4 +9,7 @@ class PopulatedProductSerializer(ProductSerializer):
     shop = PopulatedShopSerializer()
 
 class ProductWithOrdersSerializer(ProductSerializer):
+    """
+    Serializer for representing a product along with all its associated orders.
+    """
     orders = PopulatedOrderSerializer(many=True)
