@@ -90,11 +90,12 @@ class OrderDetailView(APIView):
     def put(self, request, pk):
         order_to_update = self.get_order(pk)
 
-        if order_to_update.buyer != request.user:
+        if request.user not in (order_to_update.buyer, order_to_update.product.owner):
             return Response(status=status.HTTP_401_UNAUTHORIZED)
 
-        request.data["buyer"] = request.user.id
-        print(request.data)
+        request.data["payment"] = order_to_update.payment.id
+        request.data["buyer"] = order_to_update.buyer.id
+        request.data["product"] = order_to_update.product.id
 
         #have to keep it Common serializer otherwise it expects the full buyer dictionary
         serialized_updated_order = OrderSerializer(
