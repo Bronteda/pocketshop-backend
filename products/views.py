@@ -40,13 +40,26 @@ class ProductListView(APIView):
 
         request.data['owner'] = request.user.id
         request.data['shop'] = shop.id
-        product_to_add = ProductSerializer(data=request.data)
-        print("product_to_add:", product_to_add)
+        product_serializer = ProductSerializer(data=request.data)
+        print("product_serializer:", product_serializer)
 
         try:
-            product_to_add.is_valid(raise_exception=True)
-            product_to_add.save()
-            return Response(product_to_add.data, status=status.HTTP_201_CREATED)
+            product_serializer.is_valid(raise_exception=True)
+            # Extract images from validated_data before saving product
+            images_data = product_serializer.validated_data.pop("images", [])
+            product = product_serializer.save()
+
+            # Create ProductImage rows for each image
+            for img in images_data:
+                product.images.create(
+                    public_id=img["public_id"],
+                    url=img["secure_url"],
+                    is_primary=img.get("is_primary", False)
+                )
+
+            # Return the fully populated product (includes images, shop, owner)
+            populated = PopulatedProductSerializer(product)
+            return Response(populated.data, status=status.HTTP_201_CREATED)
         except Exception as e:
             print("Error: ", {e})
             return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
@@ -81,13 +94,34 @@ class ProductDetailView(APIView):
         updated_product = ProductSerializer(
             product_to_update, data=request.data)
 
-        print("updated product is:", updated_product)
+        try:
+            # Validate payload first
+            print("updated product is:", updated_product)
+            updated_product.is_valid(raise_exception=True)
 
-        if updated_product.is_valid():
-            updated_product.save()
-            return Response(updated_product.data, status=status.HTTP_202_ACCEPTED)
+            # Extract images from validated_data before saving product
+            images_data = updated_product.validated_data.pop("images", [])
 
-        return Response(updated_product.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            # Save Product 
+            product = updated_product.save()
+
+            # Create ProductImage rows for each image
+            for img in images_data:
+                    product.images.create(
+                    public_id=img["public_id"],
+                    url=img["secure_url"],
+                    is_primary=img.get("is_primary", False)
+                )
+
+            # Return the fully populated product (includes images, shop, owner)
+            populated = PopulatedProductSerializer(product)
+
+            return Response(populated.data, status=status.HTTP_202_ACCEPTED)
+        except Exception as e:
+            print("Error: ", {e})
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+        # Note: errors are handled via raise_exception=True above and by the except block
 
     # DELETE Product
     def delete(self, request, pk):
@@ -103,9 +137,6 @@ class ProductDetailView(APIView):
     def patch(self, request, pk):
         product_to_update = self.get_product(pk=pk)
 
-        if product_to_update.owner != request.user:
-            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_403_FORBIDDEN)
-
         updated_product = ProductSerializer(
             product_to_update,
             data=request.data,
@@ -115,7 +146,7 @@ class ProductDetailView(APIView):
         if updated_product.is_valid():
             updated_product.save()
             return Response(updated_product.data, status=status.HTTP_200_OK)
-        
+
         return Response(updated_product.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 

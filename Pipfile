@@ -10,6 +10,9 @@ pyjwt = "*"
 django-cors-headers = "*"
 djangorestframework = "*"
 python-dotenv = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
+pillow = "*"
 
 [dev-packages]
 autopep8 = "*"

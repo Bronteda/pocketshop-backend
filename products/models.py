@@ -8,7 +8,6 @@ class Product(models.Model):
         return f'''
                 owner: {self.owner},
                 shop: {self.shop},
-                product_image: {self.product_image},
                 title: {self.title},
                 description: {self.description},
                 price: {self.price},
@@ -27,8 +26,6 @@ class Product(models.Model):
         related_name="products",
         on_delete=models.CASCADE
     )
-    # ST: product_image should be optional / added later
-    product_image = models.CharField(max_length=250, null=True, blank=True, default="")
     title = models.CharField(max_length=120)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
@@ -56,3 +53,13 @@ class Product(models.Model):
         choices=Category.choices,
         default=Category.CUSTOM
     )
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="images")
+    public_id = models.CharField(max_length=255)
+    url = models.URLField()
+    is_primary = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
