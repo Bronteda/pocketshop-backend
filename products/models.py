@@ -8,7 +8,6 @@ class Product(models.Model):
         return f'''
                 owner: {self.owner},
                 shop: {self.shop},
-                product_image: {self.product_image},
                 title: {self.title},
                 description: {self.description},
                 price: {self.price},

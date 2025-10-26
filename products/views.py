@@ -50,7 +50,7 @@ class ProductListView(APIView):
 
             # Create ProductImage rows for each image
             for img in images_data:
-                product.images.create(                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                product.images.create(
                     public_id=img["public_id"],
                     url=img["secure_url"],
                     is_primary=img.get("is_primary", False)
@@ -93,13 +93,34 @@ class ProductDetailView(APIView):
         updated_product = ProductSerializer(
             product_to_update, data=request.data)
 
-        print("updated product is:", updated_product)
+        try:
+            # Validate payload first
+            print("updated product is:", updated_product)
+            updated_product.is_valid(raise_exception=True)
 
-        if updated_product.is_valid():
-            updated_product.save()
-            return Response(updated_product.data, status=status.HTTP_202_ACCEPTED)
+            # Extract images from validated_data before saving product
+            images_data = updated_product.validated_data.pop("images", [])
 
-        return Response(updated_product.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            # Save Product 
+            product = updated_product.save()
+
+            # Create ProductImage rows for each image
+            for img in images_data:
+                    product.images.create(
+                    public_id=img["public_id"],
+                    url=img["secure_url"],
+                    is_primary=img.get("is_primary", False)
+                )
+
+            # Return the fully populated product (includes images, shop, owner)
+            populated = PopulatedProductSerializer(product)
+
+            return Response(populated.data, status=status.HTTP_202_ACCEPTED)
+        except Exception as e:
+            print("Error: ", {e})
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+        # Note: errors are handled via raise_exception=True above and by the except block
 
     # DELETE Product
     def delete(self, request, pk):
