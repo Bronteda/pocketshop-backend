@@ -1,6 +1,7 @@
 # pylint: disable=no-member
 from .serializers.common import ProductSerializer
 from .serializers.populated import PopulatedProductSerializer
+from .serializers.populated import ProductWithOrdersSerializer
 from .models import Product
 from shops.models import Shop
 
@@ -85,7 +86,7 @@ class ProductDetailView(APIView):
         product_to_update = self.get_product(pk=pk)
 
         if product_to_update.owner != request.user:
-            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_403_FORBIDDEN)
 
         request.data['owner'] = request.user.id
         request.data['shop'] = product_to_update.shop.id
@@ -127,7 +128,7 @@ class ProductDetailView(APIView):
         product_to_delete = self.get_product(pk=pk)
 
         if product_to_delete.owner != request.user:
-            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_403_FORBIDDEN)
 
         product_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
@@ -147,3 +148,24 @@ class ProductDetailView(APIView):
             return Response(updated_product.data, status=status.HTTP_200_OK)
 
         return Response(updated_product.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+# View a product and its orders (Auth only)
+class ProductOrdersView(APIView):
+    permission_classes = (IsAuthenticated, )
+
+    def get_product(self, pk):
+        try:
+            return Product.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            raise NotFound("🆘 Can't find that Product")
+
+    # GET/SHOW Product with orders
+    def get(self, request, pk):
+        product = self.get_product(pk=pk)
+
+        if product.owner != request.user:
+            return Response({"Error": "You do not have permissions to do that."}, status=status.HTTP_403_FORBIDDEN)
+
+        serialized_product = ProductWithOrdersSerializer(product)
+        return Response(serialized_product.data, status=status.HTTP_200_OK)
