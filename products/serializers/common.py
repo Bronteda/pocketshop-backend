@@ -4,7 +4,7 @@ from products.models import Product, ProductImage
 
 class IncomingProductImageSerializer(serializers.Serializer):
     public_id = serializers.CharField()
-    url = serializers.URLField()
+    secure_url = serializers.URLField()
 
 
 class ProductSerializer(serializers.ModelSerializer):

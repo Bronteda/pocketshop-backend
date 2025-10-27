@@ -53,7 +53,7 @@ class ProductListView(APIView):
             for img in images_data:
                 product.images.create(
                     public_id=img["public_id"],
-                    url=img["url"],
+                    url=img["secure_url"],
                 )
 
             # Return the fully populated product (includes images, shop, owner)
@@ -119,7 +119,7 @@ class ProductDetailView(APIView):
                 for img in images_data:
                     product.images.create(
                         public_id=img["public_id"],
-                        url=img["url"],
+                        url=img["secure_url"],
                     )
 
             # Return the fully populated product (includes images, shop, owner)
