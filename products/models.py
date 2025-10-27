@@ -60,6 +60,5 @@ class ProductImage(models.Model):
         Product, on_delete=models.CASCADE, related_name="images")
     public_id = models.CharField(max_length=255)
     url = models.URLField()
-    is_primary = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

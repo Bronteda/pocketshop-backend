@@ -54,7 +54,6 @@ class ProductListView(APIView):
                 product.images.create(
                     public_id=img["public_id"],
                     url=img["secure_url"],
-                    is_primary=img.get("is_primary", False)
                 )
 
             # Return the fully populated product (includes images, shop, owner)
@@ -95,23 +94,33 @@ class ProductDetailView(APIView):
             product_to_update, data=request.data)
 
         try:
+
             # Validate payload first
             print("updated product is:", updated_product)
             updated_product.is_valid(raise_exception=True)
 
             # Extract images from validated_data before saving product
-            images_data = updated_product.validated_data.pop("images", [])
+            # Use a sentinel to distinguish "missing" vs "provided (even if empty)"
+            NoImages = object()
+            images_data = updated_product.validated_data.pop(
+                "images", NoImages)
 
-            # Save Product 
+            # Save Product
             product = updated_product.save()
 
-            # Create ProductImage rows for each image
-            for img in images_data:
+            # If images were provided in the payload (including an empty list), REPLACE all images
+            # - images omitted: leave existing images as-is
+            # - images: []    : clear all images
+            # - images: [...] : clear then recreate
+            if images_data is not NoImages:
+                # Clear existing images
+                product.images.all().delete()
+                # Re-create if any provided
+                for img in images_data:
                     product.images.create(
-                    public_id=img["public_id"],
-                    url=img["secure_url"],
-                    is_primary=img.get("is_primary", False)
-                )
+                        public_id=img["public_id"],
+                        url=img["secure_url"],
+                    )
 
             # Return the fully populated product (includes images, shop, owner)
             populated = PopulatedProductSerializer(product)
