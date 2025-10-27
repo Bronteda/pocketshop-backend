@@ -1,11 +1,11 @@
 from carts.serializers.common import CartSerializer, CartItemSerializer
 from jwt_auth.serializers import UserSerializer
-from products.serializers.common import ProductSerializer
+from products.serializers.populated import PopulatedProductSerializer
 
 
 
 class PopulatedCartItemSerializer(CartItemSerializer):
-    product = ProductSerializer()
+    product = PopulatedProductSerializer()
 
 
 class PopulatedCartSerializer(CartSerializer):

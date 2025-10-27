@@ -2,12 +2,14 @@
 from .models import Order
 from .serializers.common import OrderSerializer
 from .serializers.populated import PopulatedOrderSerializer
+from products.serializers.populated import PopulatedProductSerializer
+from shops.models import Shop
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
-
+from collections import defaultdict
 from rest_framework.permissions import IsAuthenticated
 # IsAuthenticatedOrReadOnly specifies that a view is secure on all methods except get requests
 
@@ -115,3 +117,42 @@ class OrderDetailView(APIView):
         
         order_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
+# We need a view for getting all the orders of products FOR THIS SHOP
+class OrdersForProductsByShop(APIView):
+    permission_classes = (IsAuthenticated, )
+
+    # get me all the orders associated with the products for this user's shop
+    def get(self, request):
+        try:
+            shop = request.user.shop
+            print("shop is:", shop)
+        except Shop.DoesNotExist:
+            return Response({"detail": "User has no shop"}, status=status.HTTP_404_NOT_FOUND)
+
+        orders_qs = Order.objects.filter(product__shop=shop).select_related('product', 'buyer', 'payment')
+
+        orders_by_product = defaultdict(list)
+        for o in orders_qs:
+            orders_by_product[o.product_id].append(o)
+
+        # Only include products that actually have orders
+        product_ids = list(orders_by_product.keys())
+        if product_ids:
+            # 'products' is your related_name
+            products = shop.products.filter(id__in=product_ids).select_related('owner', 'shop')
+        else:
+            products = []
+
+        response = []
+        for p in products:
+            product_data = PopulatedProductSerializer(p).data
+            product_orders = orders_by_product.get(p.id, [])
+            orders_data = PopulatedOrderSerializer(product_orders, many=True).data
+            response.append({
+                "product": product_data,
+                "orders": orders_data
+            })
+
+        return Response(response, status=status.HTTP_200_OK)

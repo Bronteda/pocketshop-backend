@@ -1,12 +1,12 @@
 from products.serializers.common import ProductSerializer, ProductImageSerializer
 from jwt_auth.serializers import UserSerializer
-from shops.serializers.populated import PopulatedShopSerializer
+from shops.serializers.common import ShopSerializer
 from orders.serializers.populated import PopulatedOrderSerializer
 
 
 class PopulatedProductSerializer(ProductSerializer):
     owner = UserSerializer()
-    shop = PopulatedShopSerializer()
+    shop = ShopSerializer()
     images = ProductImageSerializer(many=True, read_only=True)
 
 
