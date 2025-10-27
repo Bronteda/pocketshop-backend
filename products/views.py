@@ -95,7 +95,7 @@ class ProductDetailView(APIView):
 
         try:
 
-            # # Validate payload first
+            # Validate payload first
             print("updated product is:", updated_product)
             updated_product.is_valid(raise_exception=True)
 
