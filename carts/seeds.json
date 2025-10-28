@@ -1,0 +1,84 @@
+[
+{
+  "model": "carts.cart",
+  "pk": 1,
+  "fields": {
+    "owner": 1,
+    "total_cost": "0.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 2,
+  "fields": {
+    "owner": 2,
+    "total_cost": "149.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 3,
+  "fields": {
+    "owner": 3,
+    "total_cost": "0.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 4,
+  "fields": {
+    "owner": 4,
+    "total_cost": "0.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 5,
+  "fields": {
+    "owner": 5,
+    "total_cost": "0.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 6,
+  "fields": {
+    "owner": 6,
+    "total_cost": "0.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 7,
+  "fields": {
+    "owner": 7,
+    "total_cost": "0.00"
+  }
+},
+{
+  "model": "carts.cart",
+  "pk": 8,
+  "fields": {
+    "owner": 8,
+    "total_cost": "48.00"
+  }
+},
+{
+  "model": "carts.cartitem",
+  "pk": 1,
+  "fields": {
+    "cart": 2,
+    "product": 5,
+    "quantity": 1
+  }
+},
+{
+  "model": "carts.cartitem",
+  "pk": 25,
+  "fields": {
+    "cart": 8,
+    "product": 6,
+    "quantity": 1
+  }
+}
+]

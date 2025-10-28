@@ -1,0 +1,74 @@
+[
+{
+  "model": "shops.shop",
+  "pk": 1,
+  "fields": {
+    "owner": 2,
+    "name": "Luna & Sol Jewelry",
+    "bio": "Luna & Sol Jewelry is a boutique brand specializing in artisan-crafted pieces made from sterling silver, gold vermeil, and natural gemstones. Each design draws inspiration from celestial forms — the quiet glow of the moon, the warmth of the sun, and the mystery of the night sky. From dainty everyday wear to statement pieces, our jewelry is made to celebrate individuality and timeless beauty.",
+    "shop_image": "",
+    "created_at": "2025-10-27T21:15:10.340Z",
+    "updated_at": "2025-10-27T21:15:10.341Z"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 3,
+  "fields": {
+    "owner": 4,
+    "name": "Tiny Stitch Studio",
+    "bio": "Tiny Stitch Studio designs handmade outfits for Labubu and collectible dolls, blending playful style with precise craftsmanship. Each piece is tailored to fit perfectly and bring extra charm to your favorite little companions.",
+    "shop_image": "",
+    "created_at": "2025-10-27T21:49:07.563Z",
+    "updated_at": "2025-10-27T21:49:07.563Z"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 4,
+  "fields": {
+    "owner": 5,
+    "name": "The Cozy Cauldron",
+    "bio": "Every soap, scrub, and balm is made by hand in small batches using clean, plant-based ingredients. From lavender oatmeal soaps to rose clay masks and whipped shea body butter, our products are designed to nurture your skin and your senses. Sustainable packaging, cruelty-free formulas, and luxurious natural scents make each item a mindful indulgence for everyday wellness.",
+    "shop_image": "",
+    "created_at": "2025-10-27T21:56:44.382Z",
+    "updated_at": "2025-10-27T21:56:44.382Z"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 5,
+  "fields": {
+    "owner": 3,
+    "name": "Arcana Playhouse",
+    "bio": "Arcana Playhouse creates and curates high-quality collectibles for tabletop gamers, fantasy lovers, and pop culture enthusiasts. From hand-poured resin dice sets and mini figurines to enamel pins and plush familiars, each piece is made to spark creativity and joy. Whether you’re building your DnD arsenal or gifting a fellow adventurer, our shop brings a bit of magic to every roll.",
+    "shop_image": "",
+    "created_at": "2025-10-27T23:32:57.362Z",
+    "updated_at": "2025-10-27T23:32:57.362Z"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 6,
+  "fields": {
+    "owner": 6,
+    "name": "Crafts by Genji",
+    "bio": "Crafts by Genji is a small handmade studio where art meets playfulness. Each item is carefully crafted using resin, clay, and mixed media to create colorful, one-of-a-kind treasures. Whether it’s a glittering dice set, an anime-inspired keychain, or a tiny sculpted figure, every piece is designed to spark joy and capture imagination.",
+    "shop_image": "",
+    "created_at": "2025-10-28T02:40:49.939Z",
+    "updated_at": "2025-10-28T02:40:49.939Z"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 7,
+  "fields": {
+    "owner": 8,
+    "name": "VintageCircuit",
+    "bio": "VintageCircuit by Samantha Jones brings together a curated mix of vintage and modern tech — from classic Polaroid cameras and retro gaming consoles to accessories for your favorite devices. Each item is tested, restored, and selected for quality, offering a nostalgic yet practical collection for collectors, gamers, and gadget lovers alike.",
+    "shop_image": "",
+    "created_at": "2025-10-28T04:58:21.060Z",
+    "updated_at": "2025-10-28T05:15:36.623Z"
+  }
+}
+]

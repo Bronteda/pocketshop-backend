@@ -1,0 +1,162 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$hxZofeRdHivO3LoEGIe1Z2$offiC+nM6nFl89d2AExwv84yetLLTICSbqLHi/TjPPE=",
+    "last_login": "2025-10-27T23:28:11.756Z",
+    "is_superuser": true,
+    "username": "admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-10-27T21:08:56.677Z",
+    "email": "admin@admin.com",
+    "first_name": "",
+    "last_name": "",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$SjK3lrSh39ddwmpgnZSkt6$Tpzaqx6aOX9HC5hwU79I3kTzvn8ad0SFEAhZn0kK/Gw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LunaMakesThings",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-27T21:14:50.988Z",
+    "email": "luna@gmail.com",
+    "first_name": "Luna",
+    "last_name": "Stickling",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yGgV1tujd9oMih6RIwfQrg$sWYpJWIRftajrah/OofcGVoRtVIG6i6qVa1WEe/IM9k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hanzoshim",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-27T21:46:48.094Z",
+    "email": "hanzo@gmail.com",
+    "first_name": "Hanzo",
+    "last_name": "Shimada",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$BMsmAC9D6oNLFcbQ9RMZmn$QTlgD6GqFwvegiNw1Bu+szbPcUqurieC/6WIi29346g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "adeleadkins",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-27T21:49:03.916Z",
+    "email": "adele@gmail.com",
+    "first_name": "Adele",
+    "last_name": "Adkins",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jq2QSK8HprIGJHUAIVuwIs$+yqucsigp65gpc8PX1e981qMRbJrVVO7qhBuJZUUKTs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bunnybashes",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-27T21:55:30.964Z",
+    "email": "bunny@gmail.com",
+    "first_name": "Bunny",
+    "last_name": "Hare",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$z5SINev3KRRpPtsXU7l10u$Myo+qTeu1QHKpIn7xkys1yVzIBUSpx4YIJpAqKMrANs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Genjimakes",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-27T23:47:44.767Z",
+    "email": "genji@gmail.com",
+    "first_name": "Genji",
+    "last_name": "Shimada",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$qiJTg6GSeFRpUkVHxKxRHF$tWphJW0fkDduKImEY5Eo7tNDFU4eIR3oU/V9RrBHh9M=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "charlotteyork",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-28T04:14:44.034Z",
+    "email": "charlotte@gmail.com",
+    "first_name": "Charlotte",
+    "last_name": "York",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$STpe68krgoLMhfwaocx4sA$X8U3Y7XHJOPtD3l3KYwlE1hREyLiipXQAn3thDUILVQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sammajones",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-10-28T04:53:26.735Z",
+    "email": "sam@gmail.com",
+    "first_name": "Samantha",
+    "last_name": "Jones",
+    "address": null,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

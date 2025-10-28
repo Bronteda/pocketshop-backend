@@ -1,0 +1,2002 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Celestial Ring Set",
+    "description": "A pair of stacking rings, symbolizing the sun and moon. Hand-hammered for a subtle shine that catches the light beautifully.",
+    "price": "78.00",
+    "quantity": 2,
+    "created_at": "2025-10-27T21:15:42.665Z",
+    "updated_at": "2025-10-27T21:16:03.325Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Handmade Beaded Stone Bracelet",
+    "description": "Crafted by hand with natural stones and polished glass beads, this bracelet brings together earthy texture and timeless charm. Each piece is uniquely strung for balance and color harmony — perfect for everyday wear or as a meaningful gift.",
+    "price": "48.00",
+    "quantity": 3,
+    "created_at": "2025-10-27T21:16:50.604Z",
+    "updated_at": "2025-10-28T00:04:20.030Z",
+    "category": "FASH"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Minimal Gemstone Gold Rings",
+    "description": "14k Gold - Elegant and understated, these minimalist gold rings feature a single hand-set gemstone for a subtle touch of color and shine. Perfect for stacking or wearing solo, each piece highlights timeless design and refined craftsmanship.",
+    "price": "65.00",
+    "quantity": 2,
+    "created_at": "2025-10-27T21:18:07.212Z",
+    "updated_at": "2025-10-28T00:06:02.239Z",
+    "category": "FASH"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Variety Gold Earrings",
+    "description": "A curated collection of handcrafted gold earrings featuring hoops, studs, and drops — each designed to suit any mood or occasion. Made with high-quality gold vermeil and polished to a radiant shine, these pieces add effortless elegance to every look.",
+    "price": "85.00",
+    "quantity": 1,
+    "created_at": "2025-10-27T21:19:07.807Z",
+    "updated_at": "2025-10-28T00:06:02.243Z",
+    "category": "FASH"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Custom Jewelry Order",
+    "description": "Design your dream piece with our custom jewelry service — from sketch to final polish. Choose your metals, gemstones, and style, and we’ll handcraft a one-of-a-kind creation that reflects your story and personal style.",
+    "price": "149.00",
+    "quantity": 9,
+    "created_at": "2025-10-27T21:20:03.513Z",
+    "updated_at": "2025-10-28T00:17:09.180Z",
+    "category": "CUST"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Thin Gold Bracelets",
+    "description": "Delicate yet radiant, these thin gold bracelets are designed for effortless elegance. Available in both chain and bangle styles, each piece is handcrafted to layer beautifully or shine on its own — a timeless staple for everyday wear.",
+    "price": "48.00",
+    "quantity": 6,
+    "created_at": "2025-10-27T21:23:54.488Z",
+    "updated_at": "2025-10-27T21:23:54.488Z",
+    "category": "FASH"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "owner": 4,
+    "shop": 3,
+    "title": "Pajama Labubu Clothes",
+    "description": "Adorably cozy and perfectly fitted, these handmade pajama sets keep your Labubu snug in style. Featuring soft fabrics, playful patterns, and tiny finishing touches, they’re ideal for bedtime displays or photo-ready cuteness.",
+    "price": "14.99",
+    "quantity": 2,
+    "created_at": "2025-10-27T21:49:42.144Z",
+    "updated_at": "2025-10-27T21:49:42.144Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "owner": 4,
+    "shop": 3,
+    "title": "Floral Dress Sets",
+    "description": "A matching set of handcrafted dresses made just for Labubu, featuring delicate stitching, soft fabrics, and whimsical details that bring each character’s personality to life. Perfect for display or photos, these custom outfits add a touch of charm and individuality to your collectible duo.",
+    "price": "24.99",
+    "quantity": 4,
+    "created_at": "2025-10-27T21:50:21.129Z",
+    "updated_at": "2025-10-27T21:50:21.129Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "owner": 4,
+    "shop": 3,
+    "title": "Crotchet Snow White Dress",
+    "description": "This handmade crochet dress captures Snow White’s classic charm with vibrant yarn, fine detailing, and a perfect miniature fit for your Labubu or collectible doll. Soft, durable, and irresistibly cute — it’s a fairytale outfit made for display or play.",
+    "price": "19.99",
+    "quantity": 8,
+    "created_at": "2025-10-27T21:50:47.760Z",
+    "updated_at": "2025-10-28T00:04:20.032Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "owner": 4,
+    "shop": 3,
+    "title": "Custom Outfit Creation",
+    "description": "Bring your vision to life with a one-of-a-kind handmade outfit tailored for your Labubu or collectible doll. From concept to final stitch, each piece is designed to match your chosen theme, colors, and style — making every creation uniquely yours.",
+    "price": "49.99",
+    "quantity": 9,
+    "created_at": "2025-10-27T21:51:35.884Z",
+    "updated_at": "2025-10-27T21:51:35.884Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Strawberry Rose Sugar Scrub",
+    "description": "A sweet, floral blend of crushed rose petals and ripe strawberry essence whipped into a soft sugar base. This exfoliating scrub gently polishes the skin while leaving it smooth, hydrated, and lightly scented with notes of fresh berries and blooms.",
+    "price": "14.99",
+    "quantity": 14,
+    "created_at": "2025-10-27T22:07:09.920Z",
+    "updated_at": "2025-10-28T17:43:20.180Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Floral Bath Bombs",
+    "description": "Handmade with care, these bath bombs combine skin-softening oils, natural botanicals, and dried flower petals for a luxurious soak. Each bomb fizzes beautifully, releasing soothing aromas and nourishing ingredients that leave your skin silky smooth and your senses relaxed. Set of 3.",
+    "price": "22.99",
+    "quantity": 4,
+    "created_at": "2025-10-27T22:08:32.808Z",
+    "updated_at": "2025-10-28T00:17:09.179Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Mini Fragrance Bottle Collection",
+    "description": "A charming assortment of handmade perfumes presented in custom mini glass bottles — perfect for gifting, travel, or trying new scents. Each fragrance is blended with essential oils and natural botanicals, offering a variety of notes from floral and citrus to warm amber and musk.",
+    "price": "13.99",
+    "quantity": 6,
+    "created_at": "2025-10-27T23:16:24.961Z",
+    "updated_at": "2025-10-28T00:17:09.177Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Custom Soap Bars",
+    "description": "Create your perfect soap with our custom-made bars, handcrafted in small batches using nourishing oils, clays, and botanicals. Choose your scent, color, and design — from calming lavender to energizing citrus — for a personalized touch to your daily self-care ritual.",
+    "price": "9.99",
+    "quantity": 8,
+    "created_at": "2025-10-27T23:20:39.811Z",
+    "updated_at": "2025-10-28T05:27:09.486Z",
+    "category": "CUST"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Curated Bath Essentials Gift Set",
+    "description": "A beautifully curated collection of handmade bath essentials designed to pamper and relax. Each set includes a mix of soaps, bath bombs, scrubs, and candles — all crafted with natural ingredients, essential oils, and floral accents for a luxurious self-care experience. Perfect for birthdays, holidays, or “just because” moments.",
+    "price": "38.99",
+    "quantity": 2,
+    "created_at": "2025-10-27T23:21:53.099Z",
+    "updated_at": "2025-10-28T00:06:02.244Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Soy Wax Candles",
+    "description": "Hand-poured from 100% natural soy wax, this candle offers a clean, long-lasting burn with a soft, soothing fragrance. Each one is crafted in small batches with cotton wicks and essential oils, creating a cozy atmosphere perfect for unwinding at home.",
+    "price": "13.99",
+    "quantity": 2,
+    "created_at": "2025-10-27T23:23:27.798Z",
+    "updated_at": "2025-10-28T00:06:02.240Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Handmade Fragrance Oils",
+    "description": "Crafted in small batches, these handmade fragrances blend natural essential oils and botanical extracts for scents that are both unique and timeless. Each perfume is carefully balanced to highlight rich layers of floral, citrus, or woodsy notes — perfect for everyday wear or special occasions. Set of 4.",
+    "price": "33.99",
+    "quantity": 4,
+    "created_at": "2025-10-27T23:25:02.833Z",
+    "updated_at": "2025-10-27T23:25:02.833Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "owner": 5,
+    "shop": 4,
+    "title": "Natural Bath Salts 3.5oz",
+    "description": "This bath salt is made with detoxifying sea salt and Epsom salts naturally soothe sore muscles and helps detoxify the body. Scented with essential oils and mixed with dried flowers, everything works together to create a seriously relaxing bath.",
+    "price": "6.99",
+    "quantity": 20,
+    "created_at": "2025-10-27T23:27:48.062Z",
+    "updated_at": "2025-10-28T05:27:09.478Z",
+    "category": "BEAU"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "owner": 2,
+    "shop": 1,
+    "title": "Gold Flower Hair Pin",
+    "description": "Add a touch of delicate charm to your hairstyle with these handcrafted floral hair pins. Each pin features petite, detailed flowers paired with luminous pearls, creating timeless look. This pins are available in gold, silver, and rose gold finishes.",
+    "price": "19.99",
+    "quantity": 8,
+    "created_at": "2025-10-27T23:30:17.830Z",
+    "updated_at": "2025-10-28T00:17:09.176Z",
+    "category": "FASH"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Gemstone Glass Polyhedral Dice",
+    "description": "Gemstone Dichroic Glass Elven Cut Polyhedral Dice (With Box) DnD Full Set. Each set of gemstone/resin dice is unique in color, pattern, and translucency, and may differ from the product picture. Dice made from gemstone can be fragile, so we recommend you avoid rolling them on hard surfaces.",
+    "price": "118.99",
+    "quantity": 11,
+    "created_at": "2025-10-27T23:38:19.198Z",
+    "updated_at": "2025-10-28T00:04:20.031Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Love Bunny Dice",
+    "description": "Elevate your gaming experience with these enchanting handcrafted bunny-themed dice! Each polyhedral die is meticulously crafted from crystal-clear epoxy resin, featuring adorable bunny stickers 🐰 suspended within. The magical liquid core creates a whimsical floating effect as the dice roll across your table.",
+    "price": "52.99",
+    "quantity": 2,
+    "created_at": "2025-10-27T23:39:27.852Z",
+    "updated_at": "2025-10-28T00:19:37.152Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Natural Rose Quartz Dice Set",
+    "description": "All of our elements and symbols are inspired by vintage image. The gemstone are picked up from nature before shaping into geometric dice. They are not perfect, but unique. When you look at them closely, each of them is shining of natural power.",
+    "price": "68.99",
+    "quantity": 3,
+    "created_at": "2025-10-27T23:43:42.524Z",
+    "updated_at": "2025-10-28T00:19:37.151Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Aurora's Tears Dice Set",
+    "description": "\"Shards of Starlight\"\nLegends whisper that when the northern lights weep, their tears crystalize into shimmering shards that mortals may hold. Aurora’s Tears captures that ethereal beauty in every sharp edge—glimmering hues that shift and dance like starlight on ice. Each roll feels like summoning the skies themselves, a reminder that magic is never far from reach.",
+    "price": "34.99",
+    "quantity": 2,
+    "created_at": "2025-10-27T23:46:32.823Z",
+    "updated_at": "2025-10-27T23:46:45.359Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Amethyst DnD Dice Set",
+    "description": "To roll or to wear. To your, my dear loved one. Amethyst can increase your intuition. You can wear this as a pendant while your roll them on the table top. To heal or to have fun. Both rights are on your hands. To protect you, to be firm at any occasion. You have this stable energy inside out. You have strong believes, hard as the gemstone. Roll them or wear them spiritually and confidently.",
+    "price": "57.99",
+    "quantity": 2,
+    "created_at": "2025-10-27T23:49:40.154Z",
+    "updated_at": "2025-10-27T23:49:40.154Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Miss Darling Mahjong Tile Set",
+    "description": "Miss Darling is a Grandmillennial’s dream: designed for lovers of needlepoint, heirloom china, and garden party glam. Every one of our 160 tiles features a hand-drawn design for a truly unique look, engraved and hand-painted on a soft white face that fades into a Wedgwood blue ombré.",
+    "price": "375.00",
+    "quantity": 2,
+    "created_at": "2025-10-27T23:52:27.321Z",
+    "updated_at": "2025-10-27T23:52:27.321Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "owner": 3,
+    "shop": 5,
+    "title": "Houseplant Mahjong Tile Set",
+    "description": "Introducing our one-of-a-kind Houseplant Mahjong Set! Every tile has been thoughtfully designed by hand—no AI, just original illustrations crafted with care by a real artist. Perfect for plant lovers and game enthusiasts alike, this unique set brings the charm of houseplants to the classic game of mahjong. Truly authentic and exclusive, you won’t find anything like it!",
+    "price": "349.00",
+    "quantity": 1,
+    "created_at": "2025-10-27T23:55:33.292Z",
+    "updated_at": "2025-10-27T23:55:33.292Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "owner": 6,
+    "shop": 6,
+    "title": "Custom Wood Grain Guitar Capo",
+    "description": "Our Personalized Guitar Capo unlocks a new realm of musical expression. This capo not only enhances the tone of your guitar but also adds a personal touch, as it is engineered for both precision and durability.",
+    "price": "7.99",
+    "quantity": 4,
+    "created_at": "2025-10-28T02:43:06.460Z",
+    "updated_at": "2025-10-28T05:27:09.485Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "owner": 6,
+    "shop": 6,
+    "title": "17-Key Personalized Kalimba",
+    "description": "Discover the enchanting sound of the 17-Key Kalimba, also known as the African thumb piano. Handcrafted from quality wood and tuned for rich, melodic tones, this beautiful finger piano is the perfect gift for music lovers of all ages – from curious kids to creative adults.",
+    "price": "20.99",
+    "quantity": 11,
+    "created_at": "2025-10-28T02:45:16.413Z",
+    "updated_at": "2025-10-28T02:45:16.413Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "owner": 6,
+    "shop": 6,
+    "title": "Custom Wooden Guitar Picks Box",
+    "description": "The color, texture, and wood grain of any natural wood product will vary from piece to piece, but this is what makes this guitar pick holder unique. Our pick case are crafted from high quality, sturdy wood. The edge treatment of the product is very meticulously smooth, and the box will keep your picks safe and protected.",
+    "price": "8.99",
+    "quantity": 18,
+    "created_at": "2025-10-28T02:47:57.210Z",
+    "updated_at": "2025-10-28T02:47:57.210Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "owner": 6,
+    "shop": 6,
+    "title": "Engraved Wooden Ring Box",
+    "description": "Add a bit of class to your special events with this beautifully crafted wooden ring box, perfect for an engagement or wedding. For wedding photos, proposals, or any special occasion (anniversary, Valentine's Day, birthday), this laser-engraved hardwood ring box is the perfect keepsake.",
+    "price": "7.99",
+    "quantity": 9,
+    "created_at": "2025-10-28T02:50:09.554Z",
+    "updated_at": "2025-10-28T02:50:09.554Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "owner": 6,
+    "shop": 6,
+    "title": "Engraved Wooden Watch for Men",
+    "description": "A one-of-a-kind and special gift for any man in your life. This laser engraved Wooden Watch with Gift Box is ideal for Husband, Boyfriend, Graduation, Junior Groomsmen, Father's Day, Birthdays, and many other occasions.",
+    "price": "40.99",
+    "quantity": 6,
+    "created_at": "2025-10-28T02:51:51.785Z",
+    "updated_at": "2025-10-28T05:27:09.485Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "owner": 6,
+    "shop": 6,
+    "title": "Wooden Hip Flask and Cups Set",
+    "description": "For the most fashionable and hassle-free way to transport your favorite drink, we provide the Personalized Wooden Flask. This flask is hand-crafted from stainless steel with American Wood and is incredibly portable, making it ideal for camping, parties, sporting events, and travel. Put your own spin on it by adding your initials or full name. This long-lasting thermos is crafted from premium food-grade 304 stainless steel.",
+    "price": "16.99",
+    "quantity": 13,
+    "created_at": "2025-10-28T02:53:25.620Z",
+    "updated_at": "2025-10-28T02:53:50.107Z",
+    "category": "ART"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "owner": 8,
+    "shop": 7,
+    "title": "Polaroid OneStep Express 600 Film Camera",
+    "description": "➽ One-Step Express in Hunter Green\n➽ Focus range of 4 feet to infinity\n➽ Requires Polaroid 600 format film\n➽ Built-in automatic flash\n➽ Focus-free operation\n➽ Switchable lens for regular or close-up instant shots\n\n➽ Condition: fair body, has a scuff at the top from wear, missing wrist wrap, one speck in viewfinder *not lens* and working condition.",
+    "price": "122.00",
+    "quantity": 1,
+    "created_at": "2025-10-28T05:01:52.481Z",
+    "updated_at": "2025-10-28T05:02:09.315Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "owner": 8,
+    "shop": 7,
+    "title": "Kodak Instamatic X-35 126mm Film Camera",
+    "description": "➽ 126mm film cartridge\n➽ Kodar Lens\n➽ Made in the US and Canada from 1970 to 1976\n➽ Comes with wrist strap\n\n➽ Condition: fair body, has some rusting and wear and not tested to work but lever and shutter works (additionally looks great as prop).",
+    "price": "59.00",
+    "quantity": 1,
+    "created_at": "2025-10-28T05:02:58.521Z",
+    "updated_at": "2025-10-28T05:02:58.521Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "owner": 8,
+    "shop": 7,
+    "title": "Polaroid Spectra System Instant Film Camera",
+    "description": "➽ Uses Polaroid Spectra film\n➽ Battery is in the film\n➽ Has AF, flash and lighten/darken controls\n➽ Features 125mm lenses, giving a field of view equivalent to 46mm on a 35mm film camera.\n➽ Comes with neck strap\n\n➽ Condition: fair shape, the latch for film does not close, used for parts/fix or decor/collectable.",
+    "price": "39.00",
+    "quantity": 1,
+    "created_at": "2025-10-28T05:03:52.935Z",
+    "updated_at": "2025-10-28T05:04:06.990Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "owner": 8,
+    "shop": 7,
+    "title": "Polaroid Impulse 600 Instant Film Camera",
+    "description": "➽ Fixed focus\n➽ Bright blue color with grey motifs\n➽ Single-element 116mm f/9 plastic lens\n➽ Electronic shutter: range of about 1/4 – 1/200 sec\n➽ Built-in electronic flash that can be hidden or not\n➽ Plastic body with some vinyl covering\n➽ Automatic flash exposures for all pictures\n\n➽ Condition: fair body, has some light age wear and working shape.",
+    "price": "148.00",
+    "quantity": 1,
+    "created_at": "2025-10-28T05:06:12.123Z",
+    "updated_at": "2025-10-28T05:06:12.123Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "owner": 8,
+    "shop": 7,
+    "title": "Canon AE-1 FD 50mm 1.8 Lens 35mm SLR Film Camera",
+    "description": "➽ Canon 50mm f/1.8 Lens\n➽ LED light meter display\n➽ Compatible with all Canon FD lenses\n➽ Classic mechanical Canon AE-1 Program camera body\n➽ Adjustable ISO settings, built-in hot-shoe for flash\n➽ Fully Manual Adjustable focus, shutter speeds, apertures (f-stops)\n➽ Manual exposure settings, built-in light meter, one auto exposure mode\n➽ Comes with neck strap, collapsible lens hood that is attached to filter\n\n➽ Condition: good body, has some dust from wear on outside , neck strap is worn and some dust in viewfinder and tested to work.",
+    "price": "285.00",
+    "quantity": 1,
+    "created_at": "2025-10-28T05:07:35.170Z",
+    "updated_at": "2025-10-28T05:07:35.170Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "owner": 8,
+    "shop": 7,
+    "title": "Kodak Brownie 8mm Film 13mm 1.8 Movie Camera",
+    "description": "➽ 8mm film movie camera\n➽ Cine-Kodak Ektanon 13mm f/1.9\n➽ Whitworth thread tripod socket\n➽ Collapsible viewfinder of the open frame type\n➽ Takes 25 ft rolls of economical ‘double-run’ 8mm ‘Kodachrome’ movie film or ‘Kodak’ black-and-white movie film\n\n➽ Condition: good body, has a few scratches from age wear and has not been tested to work (additionally looks beautiful as prop).",
+    "price": "135.00",
+    "quantity": 1,
+    "created_at": "2025-10-28T05:09:55.459Z",
+    "updated_at": "2025-10-28T05:09:55.459Z",
+    "category": "VINT"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "public_id": "qcsayiaefpjq3nx3lc26",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599762/qcsayiaefpjq3nx3lc26.jpg",
+    "created_at": "2025-10-27T21:16:03.328Z",
+    "updated_at": "2025-10-27T21:16:03.328Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "public_id": "jsijsqpb1zlwewkaumpa",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599809/jsijsqpb1zlwewkaumpa.jpg",
+    "created_at": "2025-10-27T21:16:50.607Z",
+    "updated_at": "2025-10-27T21:16:50.607Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 3,
+  "fields": {
+    "product": 2,
+    "public_id": "axmbye7q7dy4suhnqrvm",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599809/axmbye7q7dy4suhnqrvm.jpg",
+    "created_at": "2025-10-27T21:16:50.609Z",
+    "updated_at": "2025-10-27T21:16:50.609Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 4,
+  "fields": {
+    "product": 2,
+    "public_id": "mvgbdteclk7pw481vkrq",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599809/mvgbdteclk7pw481vkrq.webp",
+    "created_at": "2025-10-27T21:16:50.609Z",
+    "updated_at": "2025-10-27T21:16:50.609Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 5,
+  "fields": {
+    "product": 2,
+    "public_id": "ox5kgxijpgempo8z244o",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599809/ox5kgxijpgempo8z244o.webp",
+    "created_at": "2025-10-27T21:16:50.610Z",
+    "updated_at": "2025-10-27T21:16:50.610Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 6,
+  "fields": {
+    "product": 3,
+    "public_id": "wgdimjrpqitg7dc3xqae",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599886/wgdimjrpqitg7dc3xqae.jpg",
+    "created_at": "2025-10-27T21:18:07.214Z",
+    "updated_at": "2025-10-27T21:18:07.214Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 7,
+  "fields": {
+    "product": 3,
+    "public_id": "vsbxtfqsk5rz1mfaasxm",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599886/vsbxtfqsk5rz1mfaasxm.webp",
+    "created_at": "2025-10-27T21:18:07.215Z",
+    "updated_at": "2025-10-27T21:18:07.215Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 4,
+    "public_id": "gr9vilx7siybwjxeqfh9",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599947/gr9vilx7siybwjxeqfh9.jpg",
+    "created_at": "2025-10-27T21:19:07.809Z",
+    "updated_at": "2025-10-27T21:19:07.809Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 4,
+    "public_id": "jbjeypap9cnbkbn1qrno",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761599947/jbjeypap9cnbkbn1qrno.jpg",
+    "created_at": "2025-10-27T21:19:07.810Z",
+    "updated_at": "2025-10-27T21:19:07.810Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 5,
+    "public_id": "yzpeo9mxvnovgj2geowd",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600001/yzpeo9mxvnovgj2geowd.webp",
+    "created_at": "2025-10-27T21:20:03.516Z",
+    "updated_at": "2025-10-27T21:20:03.516Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 5,
+    "public_id": "ki0pkhga8bzkzsd06fs4",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600001/ki0pkhga8bzkzsd06fs4.jpg",
+    "created_at": "2025-10-27T21:20:03.517Z",
+    "updated_at": "2025-10-27T21:20:03.517Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 5,
+    "public_id": "ibplo0f2gf6pmghsocsr",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600001/ibplo0f2gf6pmghsocsr.jpg",
+    "created_at": "2025-10-27T21:20:03.517Z",
+    "updated_at": "2025-10-27T21:20:03.517Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 5,
+    "public_id": "rhvfouoqdyc3pvwosmvp",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600001/rhvfouoqdyc3pvwosmvp.jpg",
+    "created_at": "2025-10-27T21:20:03.518Z",
+    "updated_at": "2025-10-27T21:20:03.518Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 6,
+    "public_id": "fc4whcg7jq0lcwmeh2dd",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600233/fc4whcg7jq0lcwmeh2dd.webp",
+    "created_at": "2025-10-27T21:23:54.490Z",
+    "updated_at": "2025-10-27T21:23:54.490Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 6,
+    "public_id": "aru6mi0kgumpjdkamvlp",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600233/aru6mi0kgumpjdkamvlp.jpg",
+    "created_at": "2025-10-27T21:23:54.492Z",
+    "updated_at": "2025-10-27T21:23:54.492Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 6,
+    "public_id": "cg3gfkber5mn3u5kbyxu",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761600233/cg3gfkber5mn3u5kbyxu.jpg",
+    "created_at": "2025-10-27T21:23:54.492Z",
+    "updated_at": "2025-10-27T21:23:54.492Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 7,
+    "public_id": "jwmzpaagzaqklkdpfpbt",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601781/jwmzpaagzaqklkdpfpbt.webp",
+    "created_at": "2025-10-27T21:49:42.145Z",
+    "updated_at": "2025-10-27T21:49:42.145Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 8,
+    "public_id": "syqbr0cyvoa5trybdnte",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601820/syqbr0cyvoa5trybdnte.jpg",
+    "created_at": "2025-10-27T21:50:21.131Z",
+    "updated_at": "2025-10-27T21:50:21.131Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 19,
+  "fields": {
+    "product": 8,
+    "public_id": "oi84zrlthdnixa4pp4ib",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601820/oi84zrlthdnixa4pp4ib.jpg",
+    "created_at": "2025-10-27T21:50:21.132Z",
+    "updated_at": "2025-10-27T21:50:21.132Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 20,
+  "fields": {
+    "product": 9,
+    "public_id": "y7rra9z2uhyeqlq2iqrt",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601847/y7rra9z2uhyeqlq2iqrt.png",
+    "created_at": "2025-10-27T21:50:47.762Z",
+    "updated_at": "2025-10-27T21:50:47.762Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 21,
+  "fields": {
+    "product": 10,
+    "public_id": "ttzbsgr1x4iiayu1sers",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601894/ttzbsgr1x4iiayu1sers.webp",
+    "created_at": "2025-10-27T21:51:35.887Z",
+    "updated_at": "2025-10-27T21:51:35.887Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 22,
+  "fields": {
+    "product": 10,
+    "public_id": "ihrzmcrau7sp0kyj0wms",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601895/ihrzmcrau7sp0kyj0wms.webp",
+    "created_at": "2025-10-27T21:51:35.888Z",
+    "updated_at": "2025-10-27T21:51:35.888Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 23,
+  "fields": {
+    "product": 10,
+    "public_id": "mx3vfu95srrywvekj2au",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761601895/mx3vfu95srrywvekj2au.jpg",
+    "created_at": "2025-10-27T21:51:35.889Z",
+    "updated_at": "2025-10-27T21:51:35.889Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 27,
+  "fields": {
+    "product": 12,
+    "public_id": "zvdzzhlocprll75exlx6",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602912/zvdzzhlocprll75exlx6.webp",
+    "created_at": "2025-10-27T22:08:32.811Z",
+    "updated_at": "2025-10-27T22:08:32.811Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 28,
+  "fields": {
+    "product": 12,
+    "public_id": "maseiwxqsmf3hwmf05zk",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602912/maseiwxqsmf3hwmf05zk.webp",
+    "created_at": "2025-10-27T22:08:32.812Z",
+    "updated_at": "2025-10-27T22:08:32.812Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 29,
+  "fields": {
+    "product": 12,
+    "public_id": "bbi6ifviceuvyueoeak3",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602912/bbi6ifviceuvyueoeak3.jpg",
+    "created_at": "2025-10-27T22:08:32.813Z",
+    "updated_at": "2025-10-27T22:08:32.813Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 30,
+  "fields": {
+    "product": 12,
+    "public_id": "cuouhydolxswugvtwqal",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602912/cuouhydolxswugvtwqal.webp",
+    "created_at": "2025-10-27T22:08:32.813Z",
+    "updated_at": "2025-10-27T22:08:32.813Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 31,
+  "fields": {
+    "product": 13,
+    "public_id": "jwqm0gujvu4avjo7egh8",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761606984/jwqm0gujvu4avjo7egh8.webp",
+    "created_at": "2025-10-27T23:16:24.965Z",
+    "updated_at": "2025-10-27T23:16:24.965Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 32,
+  "fields": {
+    "product": 13,
+    "public_id": "tvzqssfzsk05swjaiiqh",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761606984/tvzqssfzsk05swjaiiqh.webp",
+    "created_at": "2025-10-27T23:16:24.966Z",
+    "updated_at": "2025-10-27T23:16:24.966Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 35,
+  "fields": {
+    "product": 15,
+    "public_id": "qz7dd8lkwctsydy1mdl2",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607238/qz7dd8lkwctsydy1mdl2.webp",
+    "created_at": "2025-10-27T23:20:39.814Z",
+    "updated_at": "2025-10-27T23:20:39.814Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 36,
+  "fields": {
+    "product": 15,
+    "public_id": "lkq34sumz1vajzml8quw",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607238/lkq34sumz1vajzml8quw.jpg",
+    "created_at": "2025-10-27T23:20:39.815Z",
+    "updated_at": "2025-10-27T23:20:39.815Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 37,
+  "fields": {
+    "product": 15,
+    "public_id": "vgb5vduapb08u9lbwie8",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607239/vgb5vduapb08u9lbwie8.jpg",
+    "created_at": "2025-10-27T23:20:39.816Z",
+    "updated_at": "2025-10-27T23:20:39.816Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 38,
+  "fields": {
+    "product": 16,
+    "public_id": "hup4eb1bo1ys153uoafh",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607311/hup4eb1bo1ys153uoafh.webp",
+    "created_at": "2025-10-27T23:21:53.102Z",
+    "updated_at": "2025-10-27T23:21:53.102Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 39,
+  "fields": {
+    "product": 16,
+    "public_id": "orjerhacgfpxvxcfyz3j",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607311/orjerhacgfpxvxcfyz3j.webp",
+    "created_at": "2025-10-27T23:21:53.103Z",
+    "updated_at": "2025-10-27T23:21:53.103Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 40,
+  "fields": {
+    "product": 16,
+    "public_id": "yfa0l4awg9kkxf4iudgn",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607311/yfa0l4awg9kkxf4iudgn.webp",
+    "created_at": "2025-10-27T23:21:53.104Z",
+    "updated_at": "2025-10-27T23:21:53.104Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 41,
+  "fields": {
+    "product": 17,
+    "public_id": "xhpoavax31q1nsndu44y",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607406/xhpoavax31q1nsndu44y.webp",
+    "created_at": "2025-10-27T23:23:27.800Z",
+    "updated_at": "2025-10-27T23:23:27.800Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 42,
+  "fields": {
+    "product": 17,
+    "public_id": "hraoboczh5vehvfiz1zo",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607407/hraoboczh5vehvfiz1zo.webp",
+    "created_at": "2025-10-27T23:23:27.801Z",
+    "updated_at": "2025-10-27T23:23:27.801Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 43,
+  "fields": {
+    "product": 17,
+    "public_id": "swtg95yjwnip3h33ng8e",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607406/swtg95yjwnip3h33ng8e.webp",
+    "created_at": "2025-10-27T23:23:27.802Z",
+    "updated_at": "2025-10-27T23:23:27.802Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 44,
+  "fields": {
+    "product": 17,
+    "public_id": "zzymv1pbklf0yfrt1r7f",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607407/zzymv1pbklf0yfrt1r7f.webp",
+    "created_at": "2025-10-27T23:23:27.803Z",
+    "updated_at": "2025-10-27T23:23:27.803Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 45,
+  "fields": {
+    "product": 18,
+    "public_id": "aagvkac1niitgdpvudcl",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607502/aagvkac1niitgdpvudcl.jpg",
+    "created_at": "2025-10-27T23:25:02.836Z",
+    "updated_at": "2025-10-27T23:25:02.836Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 46,
+  "fields": {
+    "product": 18,
+    "public_id": "t4b0e4wnvfltjxaj4nlx",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607502/t4b0e4wnvfltjxaj4nlx.webp",
+    "created_at": "2025-10-27T23:25:02.837Z",
+    "updated_at": "2025-10-27T23:25:02.837Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 47,
+  "fields": {
+    "product": 19,
+    "public_id": "xjybgvoweh9lhnnzyhxd",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607667/xjybgvoweh9lhnnzyhxd.webp",
+    "created_at": "2025-10-27T23:27:48.065Z",
+    "updated_at": "2025-10-27T23:27:48.065Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 48,
+  "fields": {
+    "product": 19,
+    "public_id": "iyn0dfwgwlnyxwvqwugn",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607666/iyn0dfwgwlnyxwvqwugn.webp",
+    "created_at": "2025-10-27T23:27:48.067Z",
+    "updated_at": "2025-10-27T23:27:48.067Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 49,
+  "fields": {
+    "product": 19,
+    "public_id": "qkqigoikd3ywabqnmbss",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607666/qkqigoikd3ywabqnmbss.webp",
+    "created_at": "2025-10-27T23:27:48.067Z",
+    "updated_at": "2025-10-27T23:27:48.067Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 50,
+  "fields": {
+    "product": 19,
+    "public_id": "sznbc8vwce44wzswu7ar",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607666/sznbc8vwce44wzswu7ar.webp",
+    "created_at": "2025-10-27T23:27:48.068Z",
+    "updated_at": "2025-10-27T23:27:48.068Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 51,
+  "fields": {
+    "product": 19,
+    "public_id": "ovqbjsyjxlxocaeplqyx",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607667/ovqbjsyjxlxocaeplqyx.webp",
+    "created_at": "2025-10-27T23:27:48.070Z",
+    "updated_at": "2025-10-27T23:27:48.070Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 52,
+  "fields": {
+    "product": 20,
+    "public_id": "n4djygkomlgs6ebfgvct",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607816/n4djygkomlgs6ebfgvct.webp",
+    "created_at": "2025-10-27T23:30:17.834Z",
+    "updated_at": "2025-10-27T23:30:17.834Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 53,
+  "fields": {
+    "product": 20,
+    "public_id": "gulmcssx620fn8hpvsnn",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607816/gulmcssx620fn8hpvsnn.webp",
+    "created_at": "2025-10-27T23:30:17.836Z",
+    "updated_at": "2025-10-27T23:30:17.836Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 54,
+  "fields": {
+    "product": 20,
+    "public_id": "q8l14h0qovusndjosznw",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607816/q8l14h0qovusndjosznw.webp",
+    "created_at": "2025-10-27T23:30:17.837Z",
+    "updated_at": "2025-10-27T23:30:17.837Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 55,
+  "fields": {
+    "product": 20,
+    "public_id": "e9xjk4a0vfqay4gumixb",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761607816/e9xjk4a0vfqay4gumixb.webp",
+    "created_at": "2025-10-27T23:30:17.838Z",
+    "updated_at": "2025-10-27T23:30:17.838Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 60,
+  "fields": {
+    "product": 22,
+    "public_id": "ppubiuowpy1td7vgy26r",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608298/ppubiuowpy1td7vgy26r.webp",
+    "created_at": "2025-10-27T23:38:19.201Z",
+    "updated_at": "2025-10-27T23:38:19.201Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 61,
+  "fields": {
+    "product": 22,
+    "public_id": "p5fjkcbgw7e83xcjja44",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608297/p5fjkcbgw7e83xcjja44.webp",
+    "created_at": "2025-10-27T23:38:19.202Z",
+    "updated_at": "2025-10-27T23:38:19.202Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 62,
+  "fields": {
+    "product": 22,
+    "public_id": "ggdzyrspglobwjlmki2n",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608297/ggdzyrspglobwjlmki2n.webp",
+    "created_at": "2025-10-27T23:38:19.203Z",
+    "updated_at": "2025-10-27T23:38:19.203Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 63,
+  "fields": {
+    "product": 22,
+    "public_id": "lvdhqsbiusk3esndkzto",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608297/lvdhqsbiusk3esndkzto.webp",
+    "created_at": "2025-10-27T23:38:19.203Z",
+    "updated_at": "2025-10-27T23:38:19.203Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 64,
+  "fields": {
+    "product": 23,
+    "public_id": "khgqu4ahztqlug9agqkp",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608367/khgqu4ahztqlug9agqkp.webp",
+    "created_at": "2025-10-27T23:39:27.855Z",
+    "updated_at": "2025-10-27T23:39:27.855Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 65,
+  "fields": {
+    "product": 23,
+    "public_id": "iopbi2eg87hlshudgc5d",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608367/iopbi2eg87hlshudgc5d.webp",
+    "created_at": "2025-10-27T23:39:27.856Z",
+    "updated_at": "2025-10-27T23:39:27.856Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 66,
+  "fields": {
+    "product": 23,
+    "public_id": "pzzaun9flm3hugqxbwti",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608367/pzzaun9flm3hugqxbwti.webp",
+    "created_at": "2025-10-27T23:39:27.856Z",
+    "updated_at": "2025-10-27T23:39:27.856Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 67,
+  "fields": {
+    "product": 24,
+    "public_id": "p7uzzfl6iaxn3vxjajhl",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608632/p7uzzfl6iaxn3vxjajhl.webp",
+    "created_at": "2025-10-27T23:43:53.417Z",
+    "updated_at": "2025-10-27T23:43:53.417Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 68,
+  "fields": {
+    "product": 24,
+    "public_id": "frsdjqzo1n6ivqp8kx8s",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608632/frsdjqzo1n6ivqp8kx8s.jpg",
+    "created_at": "2025-10-27T23:43:53.418Z",
+    "updated_at": "2025-10-27T23:43:53.418Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 69,
+  "fields": {
+    "product": 25,
+    "public_id": "lakast7didbcc6ogudqj",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608804/lakast7didbcc6ogudqj.jpg",
+    "created_at": "2025-10-27T23:46:45.363Z",
+    "updated_at": "2025-10-27T23:46:45.363Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 70,
+  "fields": {
+    "product": 25,
+    "public_id": "jxro8qoymsyab5rodixe",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608804/jxro8qoymsyab5rodixe.jpg",
+    "created_at": "2025-10-27T23:46:45.364Z",
+    "updated_at": "2025-10-27T23:46:45.364Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 71,
+  "fields": {
+    "product": 25,
+    "public_id": "y6qirmxu2ggp1gwsjwpm",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608804/y6qirmxu2ggp1gwsjwpm.jpg",
+    "created_at": "2025-10-27T23:46:45.365Z",
+    "updated_at": "2025-10-27T23:46:45.365Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 72,
+  "fields": {
+    "product": 25,
+    "public_id": "bpceiuxil9agfdbmf0bh",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608804/bpceiuxil9agfdbmf0bh.jpg",
+    "created_at": "2025-10-27T23:46:45.366Z",
+    "updated_at": "2025-10-27T23:46:45.366Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 73,
+  "fields": {
+    "product": 26,
+    "public_id": "jg0jitjw8xcelpa4o6l8",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608978/jg0jitjw8xcelpa4o6l8.webp",
+    "created_at": "2025-10-27T23:49:40.157Z",
+    "updated_at": "2025-10-27T23:49:40.157Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 74,
+  "fields": {
+    "product": 26,
+    "public_id": "fny5bvqxi693ilho0v7o",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608978/fny5bvqxi693ilho0v7o.webp",
+    "created_at": "2025-10-27T23:49:40.158Z",
+    "updated_at": "2025-10-27T23:49:40.158Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 75,
+  "fields": {
+    "product": 26,
+    "public_id": "owrzw4vfarxgazrgseox",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608978/owrzw4vfarxgazrgseox.webp",
+    "created_at": "2025-10-27T23:49:40.159Z",
+    "updated_at": "2025-10-27T23:49:40.159Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 76,
+  "fields": {
+    "product": 26,
+    "public_id": "uhbhrmmiqzozfvd1ut1u",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608978/uhbhrmmiqzozfvd1ut1u.webp",
+    "created_at": "2025-10-27T23:49:40.159Z",
+    "updated_at": "2025-10-27T23:49:40.159Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 77,
+  "fields": {
+    "product": 26,
+    "public_id": "sm3xtugltcphnyqtdyxl",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761608978/sm3xtugltcphnyqtdyxl.webp",
+    "created_at": "2025-10-27T23:49:40.160Z",
+    "updated_at": "2025-10-27T23:49:40.160Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 78,
+  "fields": {
+    "product": 27,
+    "public_id": "x1cbbnmks2tc2wjmhibx",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609145/x1cbbnmks2tc2wjmhibx.webp",
+    "created_at": "2025-10-27T23:52:27.324Z",
+    "updated_at": "2025-10-27T23:52:27.324Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 79,
+  "fields": {
+    "product": 27,
+    "public_id": "mxpbj4js9zjmr2uihm8l",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609145/mxpbj4js9zjmr2uihm8l.webp",
+    "created_at": "2025-10-27T23:52:27.325Z",
+    "updated_at": "2025-10-27T23:52:27.325Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 80,
+  "fields": {
+    "product": 27,
+    "public_id": "ogkirc4g4em1incdnjuy",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609145/ogkirc4g4em1incdnjuy.webp",
+    "created_at": "2025-10-27T23:52:27.326Z",
+    "updated_at": "2025-10-27T23:52:27.326Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 81,
+  "fields": {
+    "product": 27,
+    "public_id": "uznsxupc0l5qng1jshki",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609145/uznsxupc0l5qng1jshki.webp",
+    "created_at": "2025-10-27T23:52:27.327Z",
+    "updated_at": "2025-10-27T23:52:27.327Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 82,
+  "fields": {
+    "product": 27,
+    "public_id": "amr0e5acdabxairhz89i",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609146/amr0e5acdabxairhz89i.webp",
+    "created_at": "2025-10-27T23:52:27.327Z",
+    "updated_at": "2025-10-27T23:52:27.327Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 83,
+  "fields": {
+    "product": 27,
+    "public_id": "wnrsazmua9mju07sdkyq",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609145/wnrsazmua9mju07sdkyq.webp",
+    "created_at": "2025-10-27T23:52:27.328Z",
+    "updated_at": "2025-10-27T23:52:27.328Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 84,
+  "fields": {
+    "product": 27,
+    "public_id": "ejfybepus4ihrue9ju7a",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609145/ejfybepus4ihrue9ju7a.webp",
+    "created_at": "2025-10-27T23:52:27.328Z",
+    "updated_at": "2025-10-27T23:52:27.328Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 85,
+  "fields": {
+    "product": 27,
+    "public_id": "iaefkdvvuij7gfbkpgnz",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609146/iaefkdvvuij7gfbkpgnz.webp",
+    "created_at": "2025-10-27T23:52:27.328Z",
+    "updated_at": "2025-10-27T23:52:27.328Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 86,
+  "fields": {
+    "product": 28,
+    "public_id": "e7fbqlit6zg9cod0xm3h",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609332/e7fbqlit6zg9cod0xm3h.webp",
+    "created_at": "2025-10-27T23:55:33.295Z",
+    "updated_at": "2025-10-27T23:55:33.295Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 87,
+  "fields": {
+    "product": 28,
+    "public_id": "jbl3d0ta1qoz90vqq7mg",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609332/jbl3d0ta1qoz90vqq7mg.webp",
+    "created_at": "2025-10-27T23:55:33.296Z",
+    "updated_at": "2025-10-27T23:55:33.296Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 88,
+  "fields": {
+    "product": 28,
+    "public_id": "ctg3ksae9zjpkslcutg5",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609332/ctg3ksae9zjpkslcutg5.webp",
+    "created_at": "2025-10-27T23:55:33.297Z",
+    "updated_at": "2025-10-27T23:55:33.297Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 89,
+  "fields": {
+    "product": 28,
+    "public_id": "vvx0zzvm5d0coqvewohw",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609332/vvx0zzvm5d0coqvewohw.webp",
+    "created_at": "2025-10-27T23:55:33.297Z",
+    "updated_at": "2025-10-27T23:55:33.297Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 90,
+  "fields": {
+    "product": 28,
+    "public_id": "xaqvxpovjufjm7g77qdd",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609332/xaqvxpovjufjm7g77qdd.webp",
+    "created_at": "2025-10-27T23:55:33.298Z",
+    "updated_at": "2025-10-27T23:55:33.298Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 91,
+  "fields": {
+    "product": 28,
+    "public_id": "xufd4en0eh518cwysyfr",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761609332/xufd4en0eh518cwysyfr.webp",
+    "created_at": "2025-10-27T23:55:33.299Z",
+    "updated_at": "2025-10-27T23:55:33.299Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 92,
+  "fields": {
+    "product": 29,
+    "public_id": "zsaxnksoxdygcavl5njy",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619385/zsaxnksoxdygcavl5njy.webp",
+    "created_at": "2025-10-28T02:43:06.464Z",
+    "updated_at": "2025-10-28T02:43:06.464Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 93,
+  "fields": {
+    "product": 29,
+    "public_id": "tsgl6hnagwx9fhgsvffd",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619385/tsgl6hnagwx9fhgsvffd.webp",
+    "created_at": "2025-10-28T02:43:06.466Z",
+    "updated_at": "2025-10-28T02:43:06.466Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 94,
+  "fields": {
+    "product": 29,
+    "public_id": "yajp929gek0fvwgkdinu",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619385/yajp929gek0fvwgkdinu.webp",
+    "created_at": "2025-10-28T02:43:06.466Z",
+    "updated_at": "2025-10-28T02:43:06.466Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 95,
+  "fields": {
+    "product": 29,
+    "public_id": "nxshlqma5q5xxekd3imx",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619385/nxshlqma5q5xxekd3imx.webp",
+    "created_at": "2025-10-28T02:43:06.467Z",
+    "updated_at": "2025-10-28T02:43:06.467Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 96,
+  "fields": {
+    "product": 30,
+    "public_id": "wj122rr2d8yohjjasmby",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619515/wj122rr2d8yohjjasmby.webp",
+    "created_at": "2025-10-28T02:45:16.416Z",
+    "updated_at": "2025-10-28T02:45:16.416Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 97,
+  "fields": {
+    "product": 30,
+    "public_id": "zpg3mfkyikl87ul0p3iu",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619515/zpg3mfkyikl87ul0p3iu.webp",
+    "created_at": "2025-10-28T02:45:16.417Z",
+    "updated_at": "2025-10-28T02:45:16.417Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 98,
+  "fields": {
+    "product": 30,
+    "public_id": "kynmd3nrm2c2cx4scq3z",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619515/kynmd3nrm2c2cx4scq3z.webp",
+    "created_at": "2025-10-28T02:45:16.417Z",
+    "updated_at": "2025-10-28T02:45:16.417Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 101,
+  "fields": {
+    "product": 32,
+    "public_id": "u0p37jpec8qpcoomltjr",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619676/u0p37jpec8qpcoomltjr.webp",
+    "created_at": "2025-10-28T02:47:57.214Z",
+    "updated_at": "2025-10-28T02:47:57.214Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 102,
+  "fields": {
+    "product": 32,
+    "public_id": "g7piiresmoegluzbrwmr",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619676/g7piiresmoegluzbrwmr.webp",
+    "created_at": "2025-10-28T02:47:57.216Z",
+    "updated_at": "2025-10-28T02:47:57.216Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 103,
+  "fields": {
+    "product": 32,
+    "public_id": "yuuyvvlekcslkxzhbq3r",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619676/yuuyvvlekcslkxzhbq3r.webp",
+    "created_at": "2025-10-28T02:47:57.216Z",
+    "updated_at": "2025-10-28T02:47:57.216Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 104,
+  "fields": {
+    "product": 32,
+    "public_id": "mrnkvrfx6yrhavsac4xo",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619676/mrnkvrfx6yrhavsac4xo.webp",
+    "created_at": "2025-10-28T02:47:57.217Z",
+    "updated_at": "2025-10-28T02:47:57.217Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 105,
+  "fields": {
+    "product": 33,
+    "public_id": "lawvwf4jhwmbaxqnaa2j",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619808/lawvwf4jhwmbaxqnaa2j.webp",
+    "created_at": "2025-10-28T02:50:09.557Z",
+    "updated_at": "2025-10-28T02:50:09.557Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 106,
+  "fields": {
+    "product": 33,
+    "public_id": "g4uff0wfohn1kq6yyob8",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619808/g4uff0wfohn1kq6yyob8.webp",
+    "created_at": "2025-10-28T02:50:09.559Z",
+    "updated_at": "2025-10-28T02:50:09.559Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 107,
+  "fields": {
+    "product": 33,
+    "public_id": "x3qpvbttqqx4ngza8jdi",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619808/x3qpvbttqqx4ngza8jdi.webp",
+    "created_at": "2025-10-28T02:50:09.560Z",
+    "updated_at": "2025-10-28T02:50:09.560Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 108,
+  "fields": {
+    "product": 33,
+    "public_id": "gseku2q51uqszqw0zq1a",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619808/gseku2q51uqszqw0zq1a.webp",
+    "created_at": "2025-10-28T02:50:09.560Z",
+    "updated_at": "2025-10-28T02:50:09.560Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 109,
+  "fields": {
+    "product": 34,
+    "public_id": "hsdbrbwigznifxmzmgyq",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619910/hsdbrbwigznifxmzmgyq.webp",
+    "created_at": "2025-10-28T02:51:51.787Z",
+    "updated_at": "2025-10-28T02:51:51.787Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 110,
+  "fields": {
+    "product": 34,
+    "public_id": "sqla6z4wa0k08easiec7",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619910/sqla6z4wa0k08easiec7.webp",
+    "created_at": "2025-10-28T02:51:51.788Z",
+    "updated_at": "2025-10-28T02:51:51.788Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 111,
+  "fields": {
+    "product": 34,
+    "public_id": "mslf0ah4t2xbloe2xl1n",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619910/mslf0ah4t2xbloe2xl1n.webp",
+    "created_at": "2025-10-28T02:51:51.789Z",
+    "updated_at": "2025-10-28T02:51:51.789Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 112,
+  "fields": {
+    "product": 34,
+    "public_id": "vzh3hg9j5d2lwssqrdji",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619910/vzh3hg9j5d2lwssqrdji.webp",
+    "created_at": "2025-10-28T02:51:51.789Z",
+    "updated_at": "2025-10-28T02:51:51.789Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 113,
+  "fields": {
+    "product": 34,
+    "public_id": "xk5czjlybnykb489eu56",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761619911/xk5czjlybnykb489eu56.webp",
+    "created_at": "2025-10-28T02:51:51.789Z",
+    "updated_at": "2025-10-28T02:51:51.789Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 114,
+  "fields": {
+    "product": 35,
+    "public_id": "lowxeu6d7c9bvul9lbc2",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761620029/lowxeu6d7c9bvul9lbc2.webp",
+    "created_at": "2025-10-28T02:53:50.110Z",
+    "updated_at": "2025-10-28T02:53:50.110Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 115,
+  "fields": {
+    "product": 35,
+    "public_id": "nkjgbdyw2rhb70umwxcl",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761620029/nkjgbdyw2rhb70umwxcl.webp",
+    "created_at": "2025-10-28T02:53:50.111Z",
+    "updated_at": "2025-10-28T02:53:50.111Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 119,
+  "fields": {
+    "product": 37,
+    "public_id": "ldubgxrkxo4jdwehxt5x",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627728/ldubgxrkxo4jdwehxt5x.webp",
+    "created_at": "2025-10-28T05:02:09.319Z",
+    "updated_at": "2025-10-28T05:02:09.319Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 120,
+  "fields": {
+    "product": 37,
+    "public_id": "any8remq2d5ye6oglduf",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627728/any8remq2d5ye6oglduf.webp",
+    "created_at": "2025-10-28T05:02:09.321Z",
+    "updated_at": "2025-10-28T05:02:09.321Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 121,
+  "fields": {
+    "product": 37,
+    "public_id": "bx9mvktl9tehqzebq1ou",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627728/bx9mvktl9tehqzebq1ou.webp",
+    "created_at": "2025-10-28T05:02:09.321Z",
+    "updated_at": "2025-10-28T05:02:09.321Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 122,
+  "fields": {
+    "product": 37,
+    "public_id": "zj5fqsprjkbbdtysurro",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627728/zj5fqsprjkbbdtysurro.webp",
+    "created_at": "2025-10-28T05:02:09.322Z",
+    "updated_at": "2025-10-28T05:02:09.322Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 123,
+  "fields": {
+    "product": 38,
+    "public_id": "u2dyahy3hyje4nsses5e",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627777/u2dyahy3hyje4nsses5e.jpg",
+    "created_at": "2025-10-28T05:02:58.524Z",
+    "updated_at": "2025-10-28T05:02:58.524Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 124,
+  "fields": {
+    "product": 38,
+    "public_id": "djxwm9mj2l41noobwudg",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627777/djxwm9mj2l41noobwudg.jpg",
+    "created_at": "2025-10-28T05:02:58.525Z",
+    "updated_at": "2025-10-28T05:02:58.525Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 125,
+  "fields": {
+    "product": 38,
+    "public_id": "vnldgih3tiwfawroutbk",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627778/vnldgih3tiwfawroutbk.jpg",
+    "created_at": "2025-10-28T05:02:58.526Z",
+    "updated_at": "2025-10-28T05:02:58.526Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 126,
+  "fields": {
+    "product": 39,
+    "public_id": "wiocxbpo0npecr3otvwr",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627846/wiocxbpo0npecr3otvwr.webp",
+    "created_at": "2025-10-28T05:04:06.992Z",
+    "updated_at": "2025-10-28T05:04:06.992Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 127,
+  "fields": {
+    "product": 39,
+    "public_id": "jeahlq6ibwa5xant724h",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627846/jeahlq6ibwa5xant724h.webp",
+    "created_at": "2025-10-28T05:04:06.993Z",
+    "updated_at": "2025-10-28T05:04:06.993Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 128,
+  "fields": {
+    "product": 39,
+    "public_id": "liwbvdgbsqwrgnr38ahf",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627846/liwbvdgbsqwrgnr38ahf.webp",
+    "created_at": "2025-10-28T05:04:06.993Z",
+    "updated_at": "2025-10-28T05:04:06.993Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 129,
+  "fields": {
+    "product": 39,
+    "public_id": "fsqmdkzgukzo0r5k3ej1",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627846/fsqmdkzgukzo0r5k3ej1.webp",
+    "created_at": "2025-10-28T05:04:06.994Z",
+    "updated_at": "2025-10-28T05:04:06.994Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 130,
+  "fields": {
+    "product": 40,
+    "public_id": "xuwrkju82hmegl0t3co7",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627970/xuwrkju82hmegl0t3co7.webp",
+    "created_at": "2025-10-28T05:06:12.126Z",
+    "updated_at": "2025-10-28T05:06:12.126Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 131,
+  "fields": {
+    "product": 40,
+    "public_id": "iqmnmpstaxayvfcxgzjf",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627970/iqmnmpstaxayvfcxgzjf.webp",
+    "created_at": "2025-10-28T05:06:12.128Z",
+    "updated_at": "2025-10-28T05:06:12.128Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 132,
+  "fields": {
+    "product": 40,
+    "public_id": "yqxtorcqouhcdvbm0exy",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627970/yqxtorcqouhcdvbm0exy.webp",
+    "created_at": "2025-10-28T05:06:12.128Z",
+    "updated_at": "2025-10-28T05:06:12.128Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 133,
+  "fields": {
+    "product": 40,
+    "public_id": "llswxy9yogazicrbpgj3",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761627970/llswxy9yogazicrbpgj3.webp",
+    "created_at": "2025-10-28T05:06:12.129Z",
+    "updated_at": "2025-10-28T05:06:12.129Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 134,
+  "fields": {
+    "product": 41,
+    "public_id": "omnrarz60spztwo1meee",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628054/omnrarz60spztwo1meee.webp",
+    "created_at": "2025-10-28T05:07:35.171Z",
+    "updated_at": "2025-10-28T05:07:35.171Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 135,
+  "fields": {
+    "product": 41,
+    "public_id": "a7ihze4elag7xc0mgtmm",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628054/a7ihze4elag7xc0mgtmm.webp",
+    "created_at": "2025-10-28T05:07:35.172Z",
+    "updated_at": "2025-10-28T05:07:35.172Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 136,
+  "fields": {
+    "product": 41,
+    "public_id": "pgmozgyrr6xpqa47agiv",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628054/pgmozgyrr6xpqa47agiv.webp",
+    "created_at": "2025-10-28T05:07:35.173Z",
+    "updated_at": "2025-10-28T05:07:35.173Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 137,
+  "fields": {
+    "product": 41,
+    "public_id": "px3vnjbbuavnr9tdhiyl",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628054/px3vnjbbuavnr9tdhiyl.webp",
+    "created_at": "2025-10-28T05:07:35.173Z",
+    "updated_at": "2025-10-28T05:07:35.173Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 138,
+  "fields": {
+    "product": 42,
+    "public_id": "zpb3xyzxz9o1z5itn0ei",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628194/zpb3xyzxz9o1z5itn0ei.webp",
+    "created_at": "2025-10-28T05:09:55.462Z",
+    "updated_at": "2025-10-28T05:09:55.462Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 139,
+  "fields": {
+    "product": 42,
+    "public_id": "rl9oj7bygcsqqf79z1zq",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628194/rl9oj7bygcsqqf79z1zq.webp",
+    "created_at": "2025-10-28T05:09:55.464Z",
+    "updated_at": "2025-10-28T05:09:55.464Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 140,
+  "fields": {
+    "product": 42,
+    "public_id": "rwr8efcdbylfwkd4mnos",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628194/rwr8efcdbylfwkd4mnos.webp",
+    "created_at": "2025-10-28T05:09:55.464Z",
+    "updated_at": "2025-10-28T05:09:55.464Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 141,
+  "fields": {
+    "product": 42,
+    "public_id": "dlbmde0tkjsowupnnawj",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761628194/dlbmde0tkjsowupnnawj.webp",
+    "created_at": "2025-10-28T05:09:55.465Z",
+    "updated_at": "2025-10-28T05:09:55.465Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 150,
+  "fields": {
+    "product": 11,
+    "public_id": "ttq5ctppigrjrk7gwzny",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602828/ttq5ctppigrjrk7gwzny.jpg",
+    "created_at": "2025-10-28T17:43:20.184Z",
+    "updated_at": "2025-10-28T17:43:20.184Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 151,
+  "fields": {
+    "product": 11,
+    "public_id": "yod6eiwxrxwfjuuo40jg",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602828/yod6eiwxrxwfjuuo40jg.jpg",
+    "created_at": "2025-10-28T17:43:20.185Z",
+    "updated_at": "2025-10-28T17:43:20.186Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 152,
+  "fields": {
+    "product": 11,
+    "public_id": "lfoecdzwyewnbcgphg1y",
+    "url": "https://res.cloudinary.com/dahj5yaxj/image/upload/v1761602828/lfoecdzwyewnbcgphg1y.jpg",
+    "created_at": "2025-10-28T17:43:20.186Z",
+    "updated_at": "2025-10-28T17:43:20.186Z"
+  }
+}
+]

@@ -1,0 +1,67 @@
+[
+{
+  "model": "payments.payment",
+  "pk": 1,
+  "fields": {
+    "owner": 6,
+    "currency": "USD",
+    "status": "SUCCEEDED",
+    "provider": "mockpay",
+    "created_at": "2025-10-28T00:04:19.982Z",
+    "updated_at": "2025-10-28T00:04:19.982Z",
+    "payment_intent_id": "mock_auth_eXDXdO1h"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 2,
+  "fields": {
+    "owner": 3,
+    "currency": "USD",
+    "status": "SUCCEEDED",
+    "provider": "mockpay",
+    "created_at": "2025-10-28T00:06:02.200Z",
+    "updated_at": "2025-10-28T00:06:02.200Z",
+    "payment_intent_id": "mock_auth_lE3KtHar"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 3,
+  "fields": {
+    "owner": 4,
+    "currency": "USD",
+    "status": "SUCCEEDED",
+    "provider": "mockpay",
+    "created_at": "2025-10-28T00:17:09.135Z",
+    "updated_at": "2025-10-28T00:17:09.135Z",
+    "payment_intent_id": "mock_auth_FnT9jfNF"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 4,
+  "fields": {
+    "owner": 5,
+    "currency": "USD",
+    "status": "SUCCEEDED",
+    "provider": "mockpay",
+    "created_at": "2025-10-28T00:19:37.116Z",
+    "updated_at": "2025-10-28T00:19:37.116Z",
+    "payment_intent_id": "mock_auth_HcA6Ktov"
+  }
+},
+{
+  "model": "payments.payment",
+  "pk": 5,
+  "fields": {
+    "owner": 7,
+    "currency": "USD",
+    "status": "SUCCEEDED",
+    "provider": "mockpay",
+    "created_at": "2025-10-28T05:27:09.443Z",
+    "updated_at": "2025-10-28T05:27:09.443Z",
+    "payment_intent_id": "mock_auth_ysFgrZyL"
+  }
+}
+]
