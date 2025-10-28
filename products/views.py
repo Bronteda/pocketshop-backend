@@ -50,10 +50,11 @@ class ProductListView(APIView):
             product = product_serializer.save()
 
             # Create ProductImage rows for each image
+            # Use normalized 'url' which the serializer ensures is populated
             for img in images_data:
                 product.images.create(
                     public_id=img["public_id"],
-                    url=img["secure_url"],
+                    url=img["url"],
                 )
 
             # Return the fully populated product (includes images, shop, owner)
@@ -116,10 +117,11 @@ class ProductDetailView(APIView):
                 # Clear existing images
                 product.images.all().delete()
                 # Re-create if any provided
+                # Use normalized 'url' which the serializer ensures is populated
                 for img in images_data:
                     product.images.create(
                         public_id=img["public_id"],
-                        url=img["secure_url"],
+                        url=img["url"],
                     )
 
             # Return the fully populated product (includes images, shop, owner)
